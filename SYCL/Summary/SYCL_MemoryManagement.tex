@@ -1,0 +1,391 @@
+\documentclass[14pt,fleqn]{article}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage[letterpaper, landscape, margin=1in]{geometry}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\setlength{\parindent}{0pt}
+
+
+\begin{document}
+
+\section{SYCL Memory Management}
+Yojan Chitkara\\
+October 11, 2023
+
+
+\section{Introduction}
+This text describes the different techniques implemented in managing memory in SYCL. We look at 2 kernel implementations \textit{Matrix Addition} and \textit{Matrix Multiplication} each of which are managing memory in 3 different ways. We start off with describing what the different memory management techniques are, followed by our Kernel implementations using each memory management technique. With this we describe the results obtained on each of our kernel implementations. Finally we summarize with what we observed was the most ideal implementation for the kernels described.
+\vspace{10pt}
+
+\subsection{Memory Management}
+SYCL enables memory management for user applications through two basic mechanisms. \\
+
+1) \textit{\textbf{Malloc} pointer manipulation through standard C++ calls (Often referred to as USM or Unified Shared Memory)}\\
+
+Unified Shared Memory (USM) is a pointer-based memory management in SYCL. USM is a pointer-based approach that should be familiar to C and C++ programmers who use malloc or new to allocate data. USM simplifies development for the programmer when porting existing C/C++ code to SYCL. With USM, the developer can reference that same memory object in host and device code.\\
+
+\textbf{\textit{Types of USM}} \\
+
+\begin{tabular}{|l|l|l|l|l|}                                   
+    \hline\hline         
+    Type  & Function Call & $Description$ & Accessible on Host & Accessible on Device \\
+    \hline\hline
+    Device & malloc\_device & Allocation on Device (explicit) & NO & YES \\ \hline
+    Host & malloc\_host & Allocation on Host (implicit) & YES & NO \\ \hline
+    Shared & malloc\_shared & Allocation can migrate between host and device (implicit) & YES & YES \\ \hline
+
+\end{tabular}
+\newline\newline
+
+2) \textit{\textbf{Buffers} that encapsulate data and can be accessed using "Host/Device Accessors"}\\
+
+Device and host can either share physical memory or have distinct memories. When the memories are distinct, offloading computation requires copying data between host and device. SYCL does not require the programmer to manage the data copies. By creating Buffers and Accessors, SYCL ensures that the data is available to host and device without any programmer effort. SYCL also allows the programmer explicit control over data movement when it is necessary to achieve best peformance.\\
+\newpage
+\subsection{Kernel Implementations}
+The user application implements Matrix Multiplication kernels in SYCL for two underlying hardware - GPU and CPU. For the purpose of this Section, assume 3 Matrices - Matrix A and Matrix B (NxK and KxM - 8192xK and Kx8192) and Matrix C (NxM = 8192x8192)\\
+
+\textit{\textbf{Implementation 1}} - Allocate memory for A and B on Host and Device using malloc (for host) and malloc\_device (for device). 
+\begin{lstlisting}[language=C++]
+ 60     // Initialize Vectors and Print Values
+ 61     double *H_a = static_cast<double*>(malloc(N*K*sizeof(double)));
+ 62     double *H_b = static_cast<double*>(malloc(K*M*sizeof(double)));
+ 63     double *H_c = static_cast<double*>(malloc(N*M*sizeof(double)));
+
+ 91     // Initialize Device Mem and copy host data over to device for processing
+ 92     auto *D_a = static_cast<double*>(malloc_device<double>(N*K,q));
+ 93     auto *D_b = static_cast<double*>(malloc_device<double>(K*M,q));
+ 94     auto *D_c = static_cast<double*>(malloc_device<double>(N*M,q));
+\end{lstlisting}
+
+Initialise the two input matrices A and B on the host and copy the data over to the device for computation. 
+\begin{lstlisting}[language=C++]
+104         auto e1 = q.memcpy(D_a,H_a,(sizeof(double)*N*K));
+105         auto e2 = q.memcpy(D_b,H_b,(sizeof(double)*K*M));
+\end{lstlisting}
+The Kernel works on the copied device data using a "parallel\_for" reduction.
+\begin{lstlisting}
+107         // Kernel to multiply the two Two-Dim Vectors
+108
+109         q.parallel_for(range<2>(N,M), {e1,e2}, [=](auto index){
+110
+111             int row = index.get_id(0);
+112             int col = index.get_id(1);
+113
+114             double sum = 0.0;
+115             for(int k=0;k<K;k++)
+116                 sum += D_a[row*K + k] * D_b[k*M + col];
+117
+118             D_c[row*N + col] = sum;
+\end{lstlisting}
+Finally the result of the computation is copied back to the host. 
+\begin{lstlisting}[language=C++]
+132         q.memcpy(H_c,D_c,sizeof(double)*N*M,e4).wait();
+\end{lstlisting}
+\\
+
+\textit{\textbf{Implementation 2}} - Allocate memory for A and B on Host and Device using malloc\_shared.
+\begin{lstlisting}[language=C++]
+ 61     // Initialize Vectors and Print Values
+ 62     double *Mat_A = static_cast<double*>(malloc_shared(N*K*sizeof(double),q));
+ 63     double *Mat_B = static_cast<double*>(malloc_shared(K*M*sizeof(double),q));
+ 64     double *Mat_C = static_cast<double*>(malloc_shared(N*M*sizeof(double),q));
+\end{lstlisting}
+Initialise the two input matrices A and B and initiate the kernel on the device for computation. In this case, there is no need for explicit copy of data to or from the device to initiate computation or after the result is computed.
+\begin{lstlisting}
+ 97         // Kernel to multiply the two Two-Dim Vectors
+ 98
+ 99         q.parallel_for(range<2>(N,M), [=](auto index){
+100
+101             int row = index.get_id(0);
+102             int col = index.get_id(1);
+103
+104             double sum = 0.0;
+105             for(int k=0;k<K;k++)
+106                 sum += Mat_A[row*K + k] * Mat_B[k*M + col];
+107
+108             Mat_C[row*N + col] = sum;
+\end{lstlisting}
+\textit{\textbf{Implementation 3}} - Allocate memory for A and B on Host using standard data structures (Array, Vector,etc).
+\begin{lstlisting}[language=C++]
+ 62     // Initialize Vectors and Print Values
+ 63     std::vector<double> Mat_A(N*K,10.0);
+ 64     std::vector<double> Mat_B(K*M,20.0);
+ 65     std::vector<double> Mat_C(N*M,0.0);
+\end{lstlisting}
+Initialise SYCL "Buffers" for each Matrix data structure.
+\begin{lstlisting}[language=C++]
+ 85     buffer<double,2> Buf_a(Mat_A.data(),range<2>(N,K));
+ 86     buffer<double,2> Buf_b(Mat_B.data(),range<2>(K,M));
+ 87     buffer<double,2> Buf_c(Mat_C.data(),range<2>(N,M));
+\end{lstlisting}
+These buffers can now be accessed using "Host and Device Accessors" in the kernels (Device Accessor)
+\begin{lstlisting}[language=C++]
+ 99         q.submit([&] (handler &h)
+100         {
+101             accessor D_a(Buf_a,h);
+102             accessor D_b(Buf_b,h);
+103             accessor D_c(Buf_c,h);
+\end{lstlisting}
+and outside the kernels (Host Accessors).
+\begin{lstlisting}[language=C++]
+143     host_accessor result(Buf_c,read_only);
+\end{lstlisting}
+The Kernel works on the device accessors to compute the Matrix Product.
+\begin{lstlisting}[language=C++]
+ 98         // Kernel to add the two Two-Dim Vectors
+ 99         q.submit([&] (handler &h)
+100         {
+101             accessor D_a(Buf_a,h);
+102             accessor D_b(Buf_b,h);
+103             accessor D_c(Buf_c,h);
+104
+105             h.parallel_for(range<2>(N,M), [=](auto index){
+106                 int row = index.get_id(0);
+107                 int col = index.get_id(1);
+108
+109                 double sum = 0.0;
+110                 for(int k=0;k<K;k++)
+111                     sum += D_a[row][k] * D_b[k][col];
+112
+113                 D_c[row][col] = sum;
+\end{lstlisting}
+
+\subsection{Hardware Selector}
+SYCL allows mechanisms to switch between the underlying hardware on which the kernels are executed without significantly altering the kernel implementation.
+
+To select CPU
+\begin{lstlisting}[language=C++]
+ 58     queue q(cpu_selector_v);
+\end{lstlisting}
+
+To select GPU
+\begin{lstlisting}[language=C++]
+ 58     queue q(gpu_selector_v);
+\end{lstlisting}
+
+\vspace{10pt}
+
+\section{Results}
+The results were derived on Frontera with the following hardware specification.\\
+CPU : Intel(R) Xeon(R) Platinum 8480+ \\
+GPU : Intel(R) Data Center GPU Max 1100 (Matrix Multiplication)
+
+We have summarised the results below for the two hardware implementations.
+
+%\subsection{Matrix Addition}
+
+%\textit{\textbf{Implementation 1}} - The first implementation with Input Matrices A (2048x256) and B (2048x256) took 1.8 msec (approx) to complete. This was averaged over 10 iterations where the sum was accumulated in one of the input matrices.\\
+
+%\textit{\textbf{Implementation 2}} - The second implementation with Input Matrices A (2048x256) and B (2048x256) took 550 usec (approx) to complete. This was averaged over 10 iterations where the sum was accumulated in one of the input matrices.\\
+
+%\textit{\textbf{Implementation 3}} - The third implementation with Input Matrices A (2048x256) and B (2048x256) took 650 usec (approx) to complete. This was averaged over 10 iterations where the sum was accumulated in one of the input matrices.
+\subsection{CPU}
+\subsubsection{Matrix Multiplication}
+\textit{\textbf{Implementation 1}} - The first implementation with Input Matrices A (8192xK) and B (Kx8192) with varying K from 64 to 4096 displays a monotonically rising graphs with an inflection at points K=128 and K=256.\\
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|}                                   
+    \hline\hline         
+    N  & M & K & TTC (Sec) \\
+    \hline\hline
+    8192 & 8192 & 64 & 0.4002 \\ \hline
+    8192 & 8192 & 128 & 0.4288 \\ \hline
+    8192 & 8192 & 256 & 0.3557 \\ \hline
+    8192 & 8192 & 512 & 0.3588 \\ \hline
+    8192 & 8192 & 1024 & 0.3983 \\ \hline
+    8192 & 8192 & 2048 & 1.4838 \\ \hline
+    8192 & 8192 & 4096 & 4.1014 \\ \hline
+
+\end{tabular}
+\end{center}
+
+\textit{\textbf{Implementation 2}} - The second implementation with Input Matrices A (8192xK) and B (Kx8192) with varying K from 64 to 4096 displays a monotonically rising graphs with an inflection points K=128,K=256 and K=512 and K=1024\\
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|}                                   
+    \hline\hline         
+    N  & M & K & TTC (Sec) \\
+    \hline\hline
+    8192 & 8192 & 64 & 0.3907 \\ \hline
+    8192 & 8192 & 128 & 0.4135 \\ \hline
+    8192 & 8192 & 256 & 0.3526 \\ \hline
+    8192 & 8192 & 512 & 0.3414 \\ \hline
+    8192 & 8192 & 1024 & 0.3654 \\ \hline
+    8192 & 8192 & 2048 & 1.4513 \\ \hline
+    8192 & 8192 & 4096 & 4.5829 \\ \hline
+
+\end{tabular}
+\end{center}
+
+\textit{\textbf{Implementation 3}} - The third implementation with Input Matrices A (8192xK) and B (Kx8192) with varying K from 64 to 4096 displays a monotonically rising graphs with an inflection at points K=128 and K=256.\\
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|}                                   
+    \hline\hline         
+    N  & M & K & TTC (Sec) \\
+    \hline\hline
+    8192 & 8192 & 64 & 0.3531 \\ \hline
+    8192 & 8192 & 128 & 0.3961 \\ \hline
+    8192 & 8192 & 256 & 0.3423 \\ \hline
+    8192 & 8192 & 512 & 0.3906 \\ \hline
+    8192 & 8192 & 1024 & 0.5317 \\ \hline
+    8192 & 8192 & 2048 & 2.4641 \\ \hline
+    8192 & 8192 & 4096 & 5.9775 \\ \hline
+
+\end{tabular}
+\end{center}
+
+\subsubsection{Summary}
+We notice that for K $<$ 256, SYCL Buffers perform significantly better than the traditional malloc\_* implementations. But as K becomes increasingly larger, the double copy with separate malloc\_* on host and device offers significant performance improvements.\\
+
+\begin{center}
+\includegraphics{CPU.JPG}
+\end{center}
+
+\subsection{GPU}
+\subsubsection{Matrix Multiplication}
+\textit{\textbf{Implementation 1}} - The first implementation with Input Matrices A (8192xK) and B (Kx8192) with varying K from 64 to 4096 displays a monotonically rising graphs.\\
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|}                                   
+    \hline\hline         
+    N  & M & K & TTC (Sec) \\
+    \hline\hline
+    8192 & 8192 & 64 & 0.05648 \\ \hline
+    8192 & 8192 & 128 & 0.05903 \\ \hline
+    8192 & 8192 & 256 & 0.08414 \\ \hline
+    8192 & 8192 & 512 & 0.13699 \\ \hline
+    8192 & 8192 & 1024 & 0.23906 \\ \hline
+    8192 & 8192 & 2048 & 0.46991 \\ \hline
+    8192 & 8192 & 4096 & 1.87249 \\ \hline
+
+\end{tabular}
+\end{center}
+
+\textit{\textbf{Implementation 2}} - The second implementation with Input Matrices A (8192xK) and B (Kx8192) with varying K from 64 to 4096 displays a monotonically rising graph.\\
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|}                                   
+    \hline\hline         
+    N  & M & K & TTC (Sec) \\
+    \hline\hline
+    8192 & 8192 & 64 & 0.04883 \\ \hline
+    8192 & 8192 & 128 & 0.04912 \\ \hline
+    8192 & 8192 & 256 & 0.07327 \\ \hline
+    8192 & 8192 & 512 & 0.12714 \\ \hline
+    8192 & 8192 & 1024 & 0.22595 \\ \hline
+    8192 & 8192 & 2048 & 0.44948 \\ \hline
+    8192 & 8192 & 4096 & 1.84122 \\ \hline
+
+\end{tabular}
+\end{center}
+
+\textit{\textbf{Implementation 3}} - The third implementation with Input Matrices A (8192xK) and B (Kx8192) with varying K from 64 to 4096 displays a monotonically rising graphs.\\
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|}                                   
+    \hline\hline         
+    N  & M & K & TTC (Sec) \\
+    \hline\hline
+    8192 & 8192 & 64 & 0.03616 \\ \hline
+    8192 & 8192 & 128 & 0.04409 \\ \hline
+    8192 & 8192 & 256 & 0.07072 \\ \hline
+    8192 & 8192 & 512 & 0.12075 \\ \hline
+    8192 & 8192 & 1024 & 0.21993 \\ \hline
+    8192 & 8192 & 2048 & 0.44721 \\ \hline
+    8192 & 8192 & 4096 & 1.81316 \\ \hline
+
+\end{tabular}
+\end{center}
+
+\subsubsection{Summary}
+We notice that for all K, SYCL Buffers perform better than the traditional malloc\_* implementations on a GPU.\\  
+
+\begin{center}
+\includegraphics{GPU.JPG}
+\end{center}
+
+\section{Summary}
+In this section we summarize and compare the results of the 3 implementations of SYCL Memory Management on a CPU and a GPU. 
+
+\subsection{Implementation 1}
+In this implementation, the data movement on a GPU is bottleneck by the PCIe link, while the transfer on the CPU happens relatively quicker on the same node. If the transfer was happening on to another node, it would be bottleneck by the inter-cpu interconnect.
+Overall, Implementation 1 on the CPU is mostly limited by compute, while that on the GPU is limited by data transfer bandwidth. 
+
+\begin{table}
+\begin{subtable}[l]{0.48\textwidth}
+\begin{tabular}{|l|l|l|l|l|}                                  
+    \hline\hline
+    N  & M & K & TTC (Sec) & Mem Transfer\\
+       &   &   &           & (\% if TTC) \\
+    \hline\hline
+    8192 & 8192 & 64 & 0.05648 & 1.067\\ \hline
+    8192 & 8192 & 128 & 0.05903 & 1.924\\ \hline
+    8192 & 8192 & 256 & 0.08414 & 2.380\\ \hline
+    8192 & 8192 & 512 & 0.13699 & 3.098\\ \hline
+    8192 & 8192 & 1024 & 0.23906 & 3.285\\ \hline
+    8192 & 8192 & 2048 & 0.46991 & 3.261\\ \hline
+    8192 & 8192 & 4096 & 1.87249 & 1.572\\ \hline
+
+\end{tabular} 
+\subcaption{Double Copy - GPU}
+\end{subtable}
+\begin{subtable}[l]{0.48\textwidth}
+\begin{tabular}{|l|l|l|l|l|}                                   
+    \hline\hline         
+    N  & M & K & TTC (Sec) & Mem Transfer\\
+       &   &   &           & (\% if TTC) \\
+    \hline\hline
+    8192 & 8192 & 64 & 0.4002 & 0.112\\ \hline
+    8192 & 8192 & 128 & 0.4288 & 0.121\\ \hline
+    8192 & 8192 & 256 & 0.3557 & 0.200\\ \hline
+    8192 & 8192 & 512 & 0.3588 & 0.290\\ \hline
+    8192 & 8192 & 1024 & 0.3983 & 0.537\\ \hline
+    8192 & 8192 & 2048 & 1.4838 & 0.381\\ \hline
+    8192 & 8192 & 4096 & 4.1014 & 0.279\\ \hline
+
+\end{tabular}
+\subcaption{Double Copy - CPU}
+\end{subtable}
+\end{table}
+
+
+\begin{center}
+\includegraphics{CPUvGPU_dCopy.JPG}
+\end{center}
+
+%\textbf{\textit{Implementation 3}} $<$ \textbf{\textit{Implementation 2}} $<$ \textbf{\textit{Implementation 1}} \\
+
+%With different implementations, yielding similar results,
+%ease of implementation with standard malloc calls results in "malloc\_shared" implementation resulting in the least TTC for the Matrix Multiplication Kernel.
+\end{document}
