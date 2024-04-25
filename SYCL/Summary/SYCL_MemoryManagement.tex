@@ -267,10 +267,34 @@ We have summarised the results below for the two hardware implementations.
 
 \subsubsection{Summary}
 We notice that for K $<$ 256, SYCL Buffers perform significantly better than the traditional malloc\_* implementations. But as K becomes increasingly larger, the double copy with separate malloc\_* on host and device offers significant performance improvements.\\
-
-\begin{center}
+\\\\\\\\
+\begin{figure}
+\centering
 \includegraphics{CPU.JPG}
-\end{center}
+\caption{Compute Scaling on a CPU (K in MxNxK) across 3 different memory management techniques}
+\end{figure}
+\\\\
+\subsubsection{5-pt Stencil}
+Discretization is often phrased as applying the difference stencil. Given a physical domain, we apply the stencil to each point in that domain to derive the equation for that point. The 5-pt stencil or 5-pt difference stencil applies the [0,-1,0,-1,4,-1,0,-1,0] vector product to each element in the square domain.
+\\
+\textit{\textbf{Implementation 1}} - The first implementation with size of square domain 40000x40000 comapres two different implementations of Core scaling.
+
+SYCL-close : threads are pinned to CPU cores successively through available cores \\
+SYCL-spread : threads are sread to available cores
+
+Further, we compare the SYCL implementations with the OpenMP implementation of the 5-pt Stencil Kernel.
+\\\\\\
+\begin{figure}
+\centering
+\includegraphics{CoreScaling_Stencil_SYCL.JPG}
+\caption{SYCL Core scaling study on 5-pt Stencil.}
+\end{figure} 
+
+\begin{figure}
+\centering
+\includegraphics{CoreScaling_Stencil_SYCLvsOpenMp.JPG}
+\caption{Core scaling study on 5-pt Stencil SYCL vs OpenMP}
+\end{figure} 
 
 \subsection{GPU}
 \subsubsection{Matrix Multiplication}
@@ -331,19 +355,28 @@ We notice that for K $<$ 256, SYCL Buffers perform significantly better than the
 \subsubsection{Summary}
 We notice that for all K, SYCL Buffers perform better than the traditional malloc\_* implementations on a GPU.\\  
 
-\begin{center}
+\begin{figure}
+\centering
 \includegraphics{GPU.JPG}
-\end{center}
+\caption{Compute Scaling on a GPU (K in MxNxK) across 3 different memory management techniques}
+\end{figure}
 
 \section{Summary}
 In this section we summarize and compare the results of the 3 implementations of SYCL Memory Management on a CPU and a GPU. 
 
 \subsection{Implementation 1}
 In this implementation, the data movement on a GPU is bottleneck by the PCIe link, while the transfer on the CPU happens relatively quicker on the same node. If the transfer was happening on to another node, it would be bottleneck by the inter-cpu interconnect.
-Overall, Implementation 1 on the CPU is mostly limited by compute, while that on the GPU is limited by data transfer bandwidth. 
+Overall, Implementation 1 on the CPU is mostly limited by compute, while that on the GPU is limited by data transfer bandwidth.
+
+\begin{figure}
+\centering
+\includegraphics{CPUvGPU_dCopy.JPG}
+\caption{Compute Scaling on CPU vs GPU for Double Copy}
+\end{figure}
 
 \begin{table}
 \begin{subtable}[l]{0.48\textwidth}
+\begin{center}
 \begin{tabular}{|l|l|l|l|l|}                                  
     \hline\hline
     N  & M & K & TTC (Sec) & Mem Transfer\\
@@ -358,9 +391,12 @@ Overall, Implementation 1 on the CPU is mostly limited by compute, while that on
     8192 & 8192 & 4096 & 1.87249 & 1.572\\ \hline
 
 \end{tabular} 
-\subcaption{Double Copy - GPU}
+\end{center}
+\caption{Double Copy - GPU}
+
 \end{subtable}
 \begin{subtable}[l]{0.48\textwidth}
+\begin{center}
 \begin{tabular}{|l|l|l|l|l|}                                   
     \hline\hline         
     N  & M & K & TTC (Sec) & Mem Transfer\\
@@ -375,14 +411,13 @@ Overall, Implementation 1 on the CPU is mostly limited by compute, while that on
     8192 & 8192 & 4096 & 4.1014 & 0.279\\ \hline
 
 \end{tabular}
-\subcaption{Double Copy - CPU}
+\end{center}
+\caption{Double Copy - CPU}
 \end{subtable}
 \end{table}
 
+%\end{table}
 
-\begin{center}
-\includegraphics{CPUvGPU_dCopy.JPG}
-\end{center}
 
 %\textbf{\textit{Implementation 3}} $<$ \textbf{\textit{Implementation 2}} $<$ \textbf{\textit{Implementation 1}} \\
 
