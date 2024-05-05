@@ -246,6 +246,23 @@ This kernel performs convolution of a K*K image with a fixed 3*3 kernel matrix. 
     \caption{Stencil Speedup on GPU}
     \label{fig:Stencil}
 \end{figure}
+\subsubsection{Stencil SYCL vs OpenMP}
+We perform a core-scaling study on the Stencil implementation with multiple SYCL implementations of core-pinning. The first implementation with size of square domain 40000x40000 compares two different implementations :
+
+SYCL-close : threads are pinned to CPU cores successively through available cores \\
+SYCL-spread : threads are sread to available cores
+
+Further, we compare the SYCL implementations with the OpenMP implementation of the 5-pt Stencil Kernel.
+
+\begin{figure}
+\begin{subfigure}{.5\textwidth}
+    \includegraphics[width=.97\linewidth,keepaspectratio]{CoreScaling_Stencil_SYCL.JPG}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+    \includegraphics[width=.97\linewidth,keepaspectratio]{CoreScaling_Stencil_SYCLvsOpenMp.JPG}
+\end{subfigure}%
+    \caption{Stencil Core Scaling Study}
+\end{figure}
 \\
 \subsection{MANDELBROT SET}
 This kernel generates the Mandelbrot set fractal image. Each pixel is rendered independently and given the nature of the fractal image, numerous iterations of rendering are essential. Each iteration is an input to the next, resulting in a high quality image as the output. We only found an implementation of this workload which used buffers for memory management. The results for this benchmark are shown in Fig \ref{fig:Mandlebrot}. As can be observed, the GPU has a 4X better performance when compared to the CPU which suggests that this is a memory intensive application.
@@ -256,7 +273,7 @@ This kernel generates the Mandelbrot set fractal image. Each pixel is rendered i
     \label{fig:Mandlebrot}
 \end{figure}
 \subsection{MONTE CARLO}
-Monte Carlo workloads are a set of benchmarks which rely on repeated random sampling to obtain numerical results. Since the underlying concept relies on accuracy of computation for estimating the value of pi, we are able to classify this workload as compute intensive. This implementation is available for all three memory management techniques and we were able to observe a speedup of ~30x on a GPU over a CPU implementation of the same. \\
+Monte Carlo workloads are a set of benchmarks which rely on repeated random sampling to obtain numerical results. Since the underlying concept relies on accuracy of computation for estimating the value of pi, we are able to classify this workload as compute intensive. This implementation is available for all three memory management techniques and we were able to observe a speedup of ~30x on a GPU over a CPU implementation of the same. \\\\\\\\\
 \section{Summary}
 The cumulative results for all benchmarks are shown in Fig. \ref{fig:Speedup}. On average compute intensive benchmarks show a speedup of 30-35x and memory intensive applications show a speedup of 2-4x. These numbers align with our performance estimation using baseline specifications of the two machines. Additionally, we observe that memory management using buffers on SYCL runtime performs better than all other memory management techniques. Among these, malloc shared (implicit copying on demand) performs better than double copy, which tends to incur high transfer overhead in some cases.
 \begin{figure}
