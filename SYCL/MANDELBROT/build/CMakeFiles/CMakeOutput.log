@@ -1,0 +1,832 @@
+The system is: Linux - 5.14.0-284.25.1.el9_2.x86_64 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home1/09561/ychitkara/mandelbrot/build/CMakeFiles/3.20.2/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/dpcpp 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+icpx: warning: use of 'dpcpp' is deprecated and will be removed in a future release. Use 'icpx -fsycl' [-Wdeprecated]
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is IntelLLVM, found in "/home1/09561/ychitkara/mandelbrot/build/CMakeFiles/3.20.2/CompilerIdCXX/a.out"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home1/09561/ychitkara/mandelbrot/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_e9ba9/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e9ba9.dir/build.make CMakeFiles/cmTC_e9ba9.dir/build
+gmake[1]: Entering directory '/home1/09561/ychitkara/mandelbrot/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e9ba9.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc   -v -o CMakeFiles/cmTC_e9ba9.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-redhat-linux
+Configured with: ../configure --enable-bootstrap --enable-host-pie --enable-host-bind-now --enable-languages=c,c++,fortran,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.rockylinux.org/ --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --enable-initfini-array --without-isl --enable-multilib --with-linker-hash-style=gnu --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_64=x86-64-v2 --with-arch_32=x86-64 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.3.1 20221121 (Red Hat 11.3.1-4) (GCC) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e9ba9.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_e9ba9.dir/'
+ /usr/libexec/gcc/x86_64-redhat-linux/11/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_e9ba9.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64-v2 -version -o /tmp/ccbvRPuN.s
+GNU C17 (GCC) version 11.3.1 20221121 (Red Hat 11.3.1-4) (x86_64-redhat-linux)
+	compiled by GNU C version 11.3.1 20221121 (Red Hat 11.3.1-4), GMP version 6.2.0, MPFR version 4.1.0-p9, MPC version 1.2.1, isl version none
+warning: GMP header version 6.2.0 differs from library version 6.2.1.
+warning: MPFR header version 4.1.0-p9 differs from library version 4.1.0.
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/include-fixed"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/include
+ /scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/include
+ /scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/include
+ /scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/include
+ /scratch1/projects/compilers/intel24.1/oneapi/dpcpp-ct/2024.1/include
+ /scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/include
+ /scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/include/dal
+ /scratch1/projects/compilers/intel24.1/oneapi/dev-utilities/2024.1/include
+ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/include
+ /scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/include
+ /usr/lib/gcc/x86_64-redhat-linux/11/include
+ /usr/local/include
+ /usr/include
+End of search list.
+GNU C17 (GCC) version 11.3.1 20221121 (Red Hat 11.3.1-4) (x86_64-redhat-linux)
+	compiled by GNU C version 11.3.1 20221121 (Red Hat 11.3.1-4), GMP version 6.2.0, MPFR version 4.1.0-p9, MPC version 1.2.1, isl version none
+warning: GMP header version 6.2.0 differs from library version 6.2.1.
+warning: MPFR header version 4.1.0-p9 differs from library version 4.1.0.
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 302045d87f202c5eacaabe4baa7cd62a
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e9ba9.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_e9ba9.dir/'
+ as -v --64 -o CMakeFiles/cmTC_e9ba9.dir/CMakeCCompilerABI.c.o /tmp/ccbvRPuN.s
+GNU assembler version 2.37 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.37
+COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/lib/:/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/lib/:/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/lib/:/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/lib/:/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/lib/:/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/lib/:/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/opt/compiler/lib/:/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/:/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/lib/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e9ba9.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_e9ba9.dir/CMakeCCompilerABI.c.'
+Linking C executable cmTC_e9ba9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e9ba9.dir/link.txt --verbose=1
+/usr/bin/cc  -v -rdynamic CMakeFiles/cmTC_e9ba9.dir/CMakeCCompilerABI.c.o -o cmTC_e9ba9 
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-redhat-linux
+Configured with: ../configure --enable-bootstrap --enable-host-pie --enable-host-bind-now --enable-languages=c,c++,fortran,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.rockylinux.org/ --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --enable-initfini-array --without-isl --enable-multilib --with-linker-hash-style=gnu --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_64=x86-64-v2 --with-arch_32=x86-64 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.3.1 20221121 (Red Hat 11.3.1-4) (GCC) 
+COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/lib/:/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/lib/:/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/lib/:/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/lib/:/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/lib/:/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/lib/:/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/opt/compiler/lib/:/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/:/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/lib/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_e9ba9' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'cmTC_e9ba9.'
+ /usr/libexec/gcc/x86_64-redhat-linux/11/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/11/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccHQqyh5.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_e9ba9 /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/11 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/lib -L/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/lib -L/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/lib -L/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/lib -L/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/lib -L/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/lib -L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/opt/compiler/lib -L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib -L/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/lib -L/usr/lib/gcc/x86_64-redhat-linux/11/../../.. CMakeFiles/cmTC_e9ba9.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-redhat-linux/11/crtend.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_e9ba9' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'cmTC_e9ba9.'
+gmake[1]: Leaving directory '/home1/09561/ychitkara/mandelbrot/build/CMakeFiles/CMakeTmp'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/include]
+    add: [/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/include]
+    add: [/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/include]
+    add: [/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/include]
+    add: [/scratch1/projects/compilers/intel24.1/oneapi/dpcpp-ct/2024.1/include]
+    add: [/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/include]
+    add: [/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/include/dal]
+    add: [/scratch1/projects/compilers/intel24.1/oneapi/dev-utilities/2024.1/include]
+    add: [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/include]
+    add: [/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/include]
+    add: [/usr/lib/gcc/x86_64-redhat-linux/11/include]
+    add: [/usr/local/include]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/include] ==> [/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/include]
+  collapse include dir [/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/include] ==> [/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/include]
+  collapse include dir [/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/include] ==> [/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/include]
+  collapse include dir [/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/include] ==> [/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/include]
+  collapse include dir [/scratch1/projects/compilers/intel24.1/oneapi/dpcpp-ct/2024.1/include] ==> [/scratch1/projects/compilers/intel24.1/oneapi/dpcpp-ct/2024.1/include]
+  collapse include dir [/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/include] ==> [/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/include]
+  collapse include dir [/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/include/dal] ==> [/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/include/dal]
+  collapse include dir [/scratch1/projects/compilers/intel24.1/oneapi/dev-utilities/2024.1/include] ==> [/scratch1/projects/compilers/intel24.1/oneapi/dev-utilities/2024.1/include]
+  collapse include dir [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/include] ==> [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/include]
+  collapse include dir [/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/include] ==> [/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/include]
+  collapse include dir [/usr/lib/gcc/x86_64-redhat-linux/11/include] ==> [/usr/lib/gcc/x86_64-redhat-linux/11/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/include;/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/include;/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/include;/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/include;/scratch1/projects/compilers/intel24.1/oneapi/dpcpp-ct/2024.1/include;/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/include;/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/include/dal;/scratch1/projects/compilers/intel24.1/oneapi/dev-utilities/2024.1/include;/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/include;/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/include;/usr/lib/gcc/x86_64-redhat-linux/11/include;/usr/local/include;/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home1/09561/ychitkara/mandelbrot/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_e9ba9/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e9ba9.dir/build.make CMakeFiles/cmTC_e9ba9.dir/build]
+  ignore line: [gmake[1]: Entering directory '/home1/09561/ychitkara/mandelbrot/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_e9ba9.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_e9ba9.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+  ignore line: [Target: x86_64-redhat-linux]
+  ignore line: [Configured with: ../configure --enable-bootstrap --enable-host-pie --enable-host-bind-now --enable-languages=c c++ fortran lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.rockylinux.org/ --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --enable-initfini-array --without-isl --enable-multilib --with-linker-hash-style=gnu --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_64=x86-64-v2 --with-arch_32=x86-64 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib zstd]
+  ignore line: [gcc version 11.3.1 20221121 (Red Hat 11.3.1-4) (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e9ba9.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_e9ba9.dir/']
+  ignore line: [ /usr/libexec/gcc/x86_64-redhat-linux/11/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_e9ba9.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64-v2 -version -o /tmp/ccbvRPuN.s]
+  ignore line: [GNU C17 (GCC) version 11.3.1 20221121 (Red Hat 11.3.1-4) (x86_64-redhat-linux)]
+  ignore line: [	compiled by GNU C version 11.3.1 20221121 (Red Hat 11.3.1-4)  GMP version 6.2.0  MPFR version 4.1.0-p9  MPC version 1.2.1  isl version none]
+  ignore line: [warning: GMP header version 6.2.0 differs from library version 6.2.1.]
+  ignore line: [warning: MPFR header version 4.1.0-p9 differs from library version 4.1.0.]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/include-fixed"]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/dpcpp-ct/2024.1/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/include/dal]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/dev-utilities/2024.1/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/include]
+  ignore line: [ /usr/lib/gcc/x86_64-redhat-linux/11/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C17 (GCC) version 11.3.1 20221121 (Red Hat 11.3.1-4) (x86_64-redhat-linux)]
+  ignore line: [	compiled by GNU C version 11.3.1 20221121 (Red Hat 11.3.1-4)  GMP version 6.2.0  MPFR version 4.1.0-p9  MPC version 1.2.1  isl version none]
+  ignore line: [warning: GMP header version 6.2.0 differs from library version 6.2.1.]
+  ignore line: [warning: MPFR header version 4.1.0-p9 differs from library version 4.1.0.]
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 302045d87f202c5eacaabe4baa7cd62a]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e9ba9.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_e9ba9.dir/']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_e9ba9.dir/CMakeCCompilerABI.c.o /tmp/ccbvRPuN.s]
+  ignore line: [GNU assembler version 2.37 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.37]
+  ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/lib/:/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/lib/:/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/lib/:/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/lib/:/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/lib/:/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/lib/:/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/opt/compiler/lib/:/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/:/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/lib/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e9ba9.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_e9ba9.dir/CMakeCCompilerABI.c.']
+  ignore line: [Linking C executable cmTC_e9ba9]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e9ba9.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc  -v -rdynamic CMakeFiles/cmTC_e9ba9.dir/CMakeCCompilerABI.c.o -o cmTC_e9ba9 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper]
+  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+  ignore line: [Target: x86_64-redhat-linux]
+  ignore line: [Configured with: ../configure --enable-bootstrap --enable-host-pie --enable-host-bind-now --enable-languages=c c++ fortran lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugs.rockylinux.org/ --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --enable-initfini-array --without-isl --enable-multilib --with-linker-hash-style=gnu --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_64=x86-64-v2 --with-arch_32=x86-64 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib zstd]
+  ignore line: [gcc version 11.3.1 20221121 (Red Hat 11.3.1-4) (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/lib/:/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/lib/:/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/lib/:/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/lib/:/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/lib/:/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/lib/:/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/opt/compiler/lib/:/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/:/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/lib/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_e9ba9' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'cmTC_e9ba9.']
+  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/11/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/11/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccHQqyh5.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_e9ba9 /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/11 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/lib -L/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/lib -L/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/lib -L/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/lib -L/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/lib -L/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/lib -L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/opt/compiler/lib -L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib -L/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/lib -L/usr/lib/gcc/x86_64-redhat-linux/11/../../.. CMakeFiles/cmTC_e9ba9.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-redhat-linux/11/crtend.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o]
+    arg [/usr/libexec/gcc/x86_64-redhat-linux/11/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/libexec/gcc/x86_64-redhat-linux/11/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccHQqyh5.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--no-add-needed] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_e9ba9] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o]
+    arg [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o]
+    arg [/usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/11] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/11]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/lib] ==> dir [/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/lib]
+    arg [-L/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/lib] ==> dir [/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/lib]
+    arg [-L/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/lib] ==> dir [/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/lib]
+    arg [-L/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/lib] ==> dir [/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/lib]
+    arg [-L/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/lib] ==> dir [/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/lib]
+    arg [-L/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/lib] ==> dir [/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/lib]
+    arg [-L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/opt/compiler/lib] ==> dir [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/opt/compiler/lib]
+    arg [-L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib] ==> dir [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib]
+    arg [-L/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/lib] ==> dir [/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/lib]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/11/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/11/../../..]
+    arg [CMakeFiles/cmTC_e9ba9.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/11/crtend.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/11/crtend.o]
+    arg [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o]
+  collapse obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o] ==> [/usr/lib64/crt1.o]
+  collapse obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o] ==> [/usr/lib64/crti.o]
+  collapse obj [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o] ==> [/usr/lib64/crtn.o]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/11] ==> [/usr/lib/gcc/x86_64-redhat-linux/11]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64] ==> [/usr/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/lib] ==> [/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/lib]
+  collapse library dir [/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/lib] ==> [/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/lib]
+  collapse library dir [/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/lib] ==> [/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/lib]
+  collapse library dir [/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/lib] ==> [/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/lib]
+  collapse library dir [/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/lib] ==> [/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/lib]
+  collapse library dir [/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/lib] ==> [/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/lib]
+  collapse library dir [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/opt/compiler/lib] ==> [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/opt/compiler/lib]
+  collapse library dir [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib] ==> [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib]
+  collapse library dir [/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/lib] ==> [/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/11/../../..] ==> [/usr/lib]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit objs: [/usr/lib64/crt1.o;/usr/lib64/crti.o;/usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o;/usr/lib/gcc/x86_64-redhat-linux/11/crtend.o;/usr/lib64/crtn.o]
+  implicit dirs: [/usr/lib/gcc/x86_64-redhat-linux/11;/usr/lib64;/lib64;/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/lib;/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/lib;/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/lib;/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/lib;/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/lib;/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/lib;/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/opt/compiler/lib;/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib;/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/lib;/usr/lib]
+  implicit fwks: []
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home1/09561/ychitkara/mandelbrot/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_4e62f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4e62f.dir/build.make CMakeFiles/cmTC_4e62f.dir/build
+gmake[1]: Entering directory '/home1/09561/ychitkara/mandelbrot/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_4e62f.dir/CMakeCXXCompilerABI.cpp.o
+/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/dpcpp   -v -MD -MT CMakeFiles/cmTC_4e62f.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_4e62f.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_4e62f.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+icpx: warning: use of 'dpcpp' is deprecated and will be removed in a future release. Use 'icpx -fsycl' [-Wdeprecated]
+Intel(R) oneAPI DPC++/C++ Compiler 2024.1.0 (2024.1.0.20240308)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler
+Configuration file: /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../icpx.cfg
+Found candidate GCC installation: /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0
+Selected GCC installation: /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang" -cc1 -triple x86_64-unknown-linux-gnu -sycl-std=2020 -fsycl-unique-prefix=uid9ef3267953af3854 -include /tmp/icpx-d687f9ab94/CMakeCXXCompilerABI-header-986933.h -dependency-filter /tmp/icpx-d687f9ab94/CMakeCXXCompilerABI-header-986933.h -fsycl-enable-int-header-diags -fsycl-is-host -D __SYCL_NATIVE_CPU__ -D__SYCL_ANY_DEVICE_HAS_ANY_ASPECT__=1 -Eonly -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -fsycl-use-main-file-name -full-main-file-name /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -mrelocation-model static -fveclib=SVML -mframe-pointer=none -menable-no-infs -menable-no-nans -fapprox-func -funsafe-math-optimizations -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign,preserve-sign -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -mllvm -x86-enable-unaligned-vector-move=true -tune-cpu generic --dependent-lib=sycl-devicelib-host -debugger-tuning=gdb -fdebug-compilation-dir=/home1/09561/ychitkara/mandelbrot/build/CMakeFiles/CMakeTmp -v -fcoverage-compilation-dir=/home1/09561/ychitkara/mandelbrot/build/CMakeFiles/CMakeTmp -fclang-abi-compat=17 -resource-dir /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18 -dependency-file CMakeFiles/cmTC_4e62f.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_4e62f.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl/stl_wrappers -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include -I/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/include -I/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/include -I/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/include -I/scratch1/projects/compilers/intel24.1/oneapi/dpcpp-ct/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/include/dal -I/scratch1/projects/compilers/intel24.1/oneapi/dev-utilities/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/include -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../opt/compiler/include -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0 -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0 -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -std=c++17 -fdeprecated-macro -ferror-limit 19 -fheinous-gnu-extensions -fgpu-rdc -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -fintel-compatibility -fintel-libirc-allowed -mllvm -disable-hir-generate-mkl-call -mllvm -sycl-host -mllvm -loopopt=1 -floopopt-pipeline=light -mllvm -intel-abi-compatible=true -x c++ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+clang -cc1 version 18.0.0 based upon LLVM 18.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include"
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include"
+  as it is a non-system directory that duplicates a system directory
+ignoring duplicate directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0"
+ignoring duplicate directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu"
+ignoring duplicate directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward"
+ignoring duplicate directory "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/include
+ /scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/include
+ /scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/include
+ /scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/include
+ /scratch1/projects/compilers/intel24.1/oneapi/dpcpp-ct/2024.1/include
+ /scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/include
+ /scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/include/dal
+ /scratch1/projects/compilers/intel24.1/oneapi/dev-utilities/2024.1/include
+ /scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/include
+ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl
+ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl/stl_wrappers
+ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include
+ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../opt/compiler/include
+ /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0
+ /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu
+ /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward
+ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include
+ /usr/local/include
+ /usr/include
+End of search list.
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang" -cc1 -triple spir64-unknown-unknown -aux-triple x86_64-unknown-linux-gnu -fsycl-is-device -fdeclare-spirv-builtins -mllvm -sycl-opt -fenable-sycl-dae -fsycl-instrument-device-code -Wno-sycl-strict -fsycl-int-header=/tmp/icpx-d687f9ab94/CMakeCXXCompilerABI-header-986933.h -fsycl-int-footer=/tmp/icpx-d687f9ab94/CMakeCXXCompilerABI-footer-fbbf45.h -sycl-std=2020 -ffine-grained-bitfield-accesses -fsycl-unique-prefix=uid9ef3267953af3854 -D__SYCL_ANY_DEVICE_HAS_ANY_ASPECT__=1 -Wspir-compat -emit-llvm-bc -emit-llvm-uselists -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -fsycl-use-main-file-name -full-main-file-name /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -mrelocation-model static -fveclib=SVML -mframe-pointer=all -menable-no-infs -menable-no-nans -fapprox-func -funsafe-math-optimizations -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign,preserve-sign -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -mconstructor-aliases -aux-target-cpu x86-64 -debugger-tuning=gdb -fdebug-compilation-dir=/home1/09561/ychitkara/mandelbrot/build/CMakeFiles/CMakeTmp -v -fcoverage-compilation-dir=/home1/09561/ychitkara/mandelbrot/build/CMakeFiles/CMakeTmp -fclang-abi-compat=17 -resource-dir /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18 -dependency-file CMakeFiles/cmTC_4e62f.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_4e62f.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl/stl_wrappers -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include -I/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/include -I/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/include -I/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/include -I/scratch1/projects/compilers/intel24.1/oneapi/dpcpp-ct/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/include/dal -I/scratch1/projects/compilers/intel24.1/oneapi/dev-utilities/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/include -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../opt/compiler/include -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0 -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0 -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -std=c++17 -fdeprecated-macro -ferror-limit 19 -fheinous-gnu-extensions -fgpu-rdc -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -fintel-compatibility -fintel-compatibility-disable=FakeLoad -fintel-libirc-allowed -mllvm -disable-hir-generate-mkl-call -mllvm -intel-abi-compatible=true -o /tmp/icpx-d687f9ab94/CMakeCXXCompilerABI-ad93b9.bc -x c++ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+clang -cc1 version 18.0.0 based upon LLVM 18.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include"
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include"
+  as it is a non-system directory that duplicates a system directory
+ignoring duplicate directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0"
+ignoring duplicate directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu"
+ignoring duplicate directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward"
+ignoring duplicate directory "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/include
+ /scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/include
+ /scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/include
+ /scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/include
+ /scratch1/projects/compilers/intel24.1/oneapi/dpcpp-ct/2024.1/include
+ /scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/include
+ /scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/include/dal
+ /scratch1/projects/compilers/intel24.1/oneapi/dev-utilities/2024.1/include
+ /scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/include
+ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl
+ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl/stl_wrappers
+ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include
+ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../opt/compiler/include
+ /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0
+ /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu
+ /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward
+ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include
+ /usr/local/include
+ /usr/include
+End of search list.
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/append-file" /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp --append=/tmp/icpx-d687f9ab94/CMakeCXXCompilerABI-footer-fbbf45.h --orig-filename=/usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp --output=/tmp/icpx-d687f9ab94/CMakeCXXCompilerABI-7efe74.cpp --use-include
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang" -cc1 -triple x86_64-unknown-linux-gnu -sycl-std=2020 -fsycl-unique-prefix=uid9ef3267953af3854 -include /tmp/icpx-d687f9ab94/CMakeCXXCompilerABI-header-986933.h -dependency-filter /tmp/icpx-d687f9ab94/CMakeCXXCompilerABI-header-986933.h -fsycl-enable-int-header-diags -fsycl-is-host -D __SYCL_NATIVE_CPU__ -D__SYCL_ANY_DEVICE_HAS_ANY_ASPECT__=1 -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -fsycl-use-main-file-name -full-main-file-name /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -mrelocation-model static -fveclib=SVML -mframe-pointer=none -menable-no-infs -menable-no-nans -fapprox-func -funsafe-math-optimizations -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign,preserve-sign -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -mllvm -x86-enable-unaligned-vector-move=true -tune-cpu generic --dependent-lib=sycl-devicelib-host -debugger-tuning=gdb -fdebug-compilation-dir=/home1/09561/ychitkara/mandelbrot/build/CMakeFiles/CMakeTmp -v -fcoverage-compilation-dir=/home1/09561/ychitkara/mandelbrot/build/CMakeFiles/CMakeTmp -fclang-abi-compat=17 -resource-dir /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18 -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl/stl_wrappers -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include -iquote /usr/share/cmake/Modules -I/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/include -I/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/include -I/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/include -I/scratch1/projects/compilers/intel24.1/oneapi/dpcpp-ct/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/include/dal -I/scratch1/projects/compilers/intel24.1/oneapi/dev-utilities/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/include -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../opt/compiler/include -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0 -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0 -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -std=c++17 -fdeprecated-macro -ferror-limit 19 -fheinous-gnu-extensions -fgpu-rdc -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -fintel-compatibility -fintel-libirc-allowed -mllvm -disable-hir-generate-mkl-call -mllvm -sycl-host -mllvm -loopopt=1 -floopopt-pipeline=light -mllvm -intel-abi-compatible=true -o /tmp/icpx-d687f9ab94/CMakeCXXCompilerABI-1135a8.o -x c++ /tmp/icpx-d687f9ab94/CMakeCXXCompilerABI-7efe74.cpp
+clang -cc1 version 18.0.0 based upon LLVM 18.0.0git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include"
+ignoring nonexistent directory "/include"
+ignoring nonexistent directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include"
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include"
+  as it is a non-system directory that duplicates a system directory
+ignoring duplicate directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0"
+ignoring duplicate directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu"
+ignoring duplicate directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward"
+ignoring duplicate directory "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include"
+ignoring duplicate directory "/usr/local/include"
+ignoring duplicate directory "/usr/include"
+#include "..." search starts here:
+ /usr/share/cmake/Modules
+#include <...> search starts here:
+ /scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/include
+ /scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/include
+ /scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/include
+ /scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/include
+ /scratch1/projects/compilers/intel24.1/oneapi/dpcpp-ct/2024.1/include
+ /scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/include
+ /scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/include/dal
+ /scratch1/projects/compilers/intel24.1/oneapi/dev-utilities/2024.1/include
+ /scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/include
+ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl
+ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl/stl_wrappers
+ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include
+ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../opt/compiler/include
+ /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0
+ /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu
+ /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward
+ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include
+ /usr/local/include
+ /usr/include
+End of search list.
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown,host-x86_64-unknown-linux-gnu -output=CMakeFiles/cmTC_4e62f.dir/CMakeCXXCompilerABI.cpp.o -input=/tmp/icpx-d687f9ab94/CMakeCXXCompilerABI-ad93b9.bc -input=/tmp/icpx-d687f9ab94/CMakeCXXCompilerABI-1135a8.o -verbose
+Linking CXX executable cmTC_4e62f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4e62f.dir/link.txt --verbose=1
+/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/dpcpp  -v -rdynamic CMakeFiles/cmTC_4e62f.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_4e62f 
+icpx: warning: use of 'dpcpp' is deprecated and will be removed in a future release. Use 'icpx -fsycl' [-Wdeprecated]
+Intel(R) oneAPI DPC++/C++ Compiler 2024.1.0 (2024.1.0.20240308)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler
+Configuration file: /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../icpx.cfg
+Found candidate GCC installation: /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0
+Selected GCC installation: /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler -type=o -input=CMakeFiles/cmTC_4e62f.dir/CMakeCXXCompilerABI.cpp.o -list 
+/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler -type=o -input=CMakeFiles/cmTC_4e62f.dir/CMakeCXXCompilerABI.cpp.o -list 
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=host-x86_64-unknown-linux-gnu,sycl-spir64-unknown-unknown -input=CMakeFiles/cmTC_4e62f.dir/CMakeCXXCompilerABI.cpp.o -output=/tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-403dd6.o -output=/tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-6e5d84.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose
+Uncompressed bundle.
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/spirv-to-ir-wrapper" /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-6e5d84.o -o /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-9424f8.bc -llvm-spirv-opts "--spirv-preserve-auxdata --spirv-target-env=SPV-IR --spirv-builtin-format=global"
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/llvm-link" /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-9424f8.bc -o /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-0e18c9.bc --suppress-warnings
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-crt.o -output=/tmp/icpx-7afccebb5b/libsycl-crt-967f28.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose
+Uncompressed bundle.
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-complex.o -output=/tmp/icpx-7afccebb5b/libsycl-complex-068336.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose
+Uncompressed bundle.
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-complex-fp64.o -output=/tmp/icpx-7afccebb5b/libsycl-complex-fp64-9a4f7c.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose
+Uncompressed bundle.
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-cmath.o -output=/tmp/icpx-7afccebb5b/libsycl-cmath-31065f.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose
+Uncompressed bundle.
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-cmath-fp64.o -output=/tmp/icpx-7afccebb5b/libsycl-cmath-fp64-e5dfda.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose
+Uncompressed bundle.
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-imf.o -output=/tmp/icpx-7afccebb5b/libsycl-imf-860f62.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose
+Uncompressed bundle.
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-imf-fp64.o -output=/tmp/icpx-7afccebb5b/libsycl-imf-fp64-76809c.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose
+Uncompressed bundle.
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-imf-bf16.o -output=/tmp/icpx-7afccebb5b/libsycl-imf-bf16-626a1d.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose
+Uncompressed bundle.
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-fallback-cassert.o -output=/tmp/icpx-7afccebb5b/libsycl-fallback-cassert-65e6b4.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose
+Uncompressed bundle.
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-fallback-cstring.o -output=/tmp/icpx-7afccebb5b/libsycl-fallback-cstring-599287.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose
+Uncompressed bundle.
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-fallback-complex.o -output=/tmp/icpx-7afccebb5b/libsycl-fallback-complex-c0ddf3.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose
+Uncompressed bundle.
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-fallback-complex-fp64.o -output=/tmp/icpx-7afccebb5b/libsycl-fallback-complex-fp64-f79872.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose
+Uncompressed bundle.
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-fallback-cmath.o -output=/tmp/icpx-7afccebb5b/libsycl-fallback-cmath-4d5a76.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose
+Uncompressed bundle.
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-fallback-cmath-fp64.o -output=/tmp/icpx-7afccebb5b/libsycl-fallback-cmath-fp64-7db636.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose
+Uncompressed bundle.
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-fallback-imf.o -output=/tmp/icpx-7afccebb5b/libsycl-fallback-imf-a8f3a7.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose
+Uncompressed bundle.
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-fallback-imf-fp64.o -output=/tmp/icpx-7afccebb5b/libsycl-fallback-imf-fp64-a77847.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose
+Uncompressed bundle.
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-fallback-imf-bf16.o -output=/tmp/icpx-7afccebb5b/libsycl-fallback-imf-bf16-b3e5b5.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose
+Uncompressed bundle.
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-itt-user-wrappers.o -output=/tmp/icpx-7afccebb5b/libsycl-itt-user-wrappers-7f2c99.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose
+Uncompressed bundle.
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-itt-compiler-wrappers.o -output=/tmp/icpx-7afccebb5b/libsycl-itt-compiler-wrappers-316e79.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose
+Uncompressed bundle.
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-itt-stubs.o -output=/tmp/icpx-7afccebb5b/libsycl-itt-stubs-51144b.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose
+Uncompressed bundle.
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/llvm-link" -only-needed /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-0e18c9.bc /tmp/icpx-7afccebb5b/libsycl-crt-967f28.o /tmp/icpx-7afccebb5b/libsycl-complex-068336.o /tmp/icpx-7afccebb5b/libsycl-complex-fp64-9a4f7c.o /tmp/icpx-7afccebb5b/libsycl-cmath-31065f.o /tmp/icpx-7afccebb5b/libsycl-cmath-fp64-e5dfda.o /tmp/icpx-7afccebb5b/libsycl-imf-860f62.o /tmp/icpx-7afccebb5b/libsycl-imf-fp64-76809c.o /tmp/icpx-7afccebb5b/libsycl-imf-bf16-626a1d.o /tmp/icpx-7afccebb5b/libsycl-fallback-cassert-65e6b4.o /tmp/icpx-7afccebb5b/libsycl-fallback-cstring-599287.o /tmp/icpx-7afccebb5b/libsycl-fallback-complex-c0ddf3.o /tmp/icpx-7afccebb5b/libsycl-fallback-complex-fp64-f79872.o /tmp/icpx-7afccebb5b/libsycl-fallback-cmath-4d5a76.o /tmp/icpx-7afccebb5b/libsycl-fallback-cmath-fp64-7db636.o /tmp/icpx-7afccebb5b/libsycl-fallback-imf-a8f3a7.o /tmp/icpx-7afccebb5b/libsycl-fallback-imf-fp64-a77847.o /tmp/icpx-7afccebb5b/libsycl-fallback-imf-bf16-b3e5b5.o /tmp/icpx-7afccebb5b/libsycl-itt-user-wrappers-7f2c99.o /tmp/icpx-7afccebb5b/libsycl-itt-compiler-wrappers-316e79.o /tmp/icpx-7afccebb5b/libsycl-itt-stubs-51144b.o -o /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-cf2376.bc --suppress-warnings
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/sycl-post-link" -split=auto -emit-only-kernels-as-entry-points -emit-param-info -symbols -emit-exported-symbols -split-esimd -lower-esimd -O2 -spec-const=native -device-globals -o /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-a2a875.table /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-cf2376.bc
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/file-table-tform" -extract=Code -drop_titles -o /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-df5fbe.txt /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-a2a875.table
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/llvm-foreach" --in-file-list=/tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-df5fbe.txt --in-replace=/tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-df5fbe.txt --out-ext=spv --out-file-list=/tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-8efed6.txt --out-replace=/tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-8efed6.txt --out-dir=/tmp/icpx-7afccebb5b -- /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/llvm-spirv -o /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-8efed6.txt -spirv-max-version=1.4 -spirv-debug-info-version=ocl-100 -spirv-allow-extra-diexpressions -spirv-allow-unknown-intrinsics=llvm.genx. -spirv-ext=-all,+SPV_EXT_shader_atomic_float_add,+SPV_EXT_shader_atomic_float_min_max,+SPV_KHR_no_integer_wrap_decoration,+SPV_KHR_float_controls,+SPV_KHR_expect_assume,+SPV_KHR_linkonce_odr,+SPV_INTEL_subgroups,+SPV_INTEL_media_block_io,+SPV_INTEL_device_side_avc_motion_estimation,+SPV_INTEL_fpga_loop_controls,+SPV_INTEL_unstructured_loop_controls,+SPV_INTEL_fpga_reg,+SPV_INTEL_blocking_pipes,+SPV_INTEL_function_pointers,+SPV_INTEL_kernel_attributes,+SPV_INTEL_io_pipes,+SPV_INTEL_inline_assembly,+SPV_INTEL_arbitrary_precision_integers,+SPV_INTEL_float_controls2,+SPV_INTEL_vector_compute,+SPV_INTEL_fast_composite,+SPV_INTEL_joint_matrix,+SPV_INTEL_arbitrary_precision_fixed_point,+SPV_INTEL_arbitrary_precision_floating_point,+SPV_INTEL_variable_length_array,+SPV_INTEL_fp_fast_math_mode,+SPV_INTEL_long_constant_composite,+SPV_INTEL_arithmetic_fence,+SPV_INTEL_global_variable_decorations,+SPV_INTEL_cache_controls,+SPV_INTEL_fpga_buffer_location,+SPV_INTEL_fpga_argument_interfaces,+SPV_INTEL_fpga_invocation_pipelining_attributes,+SPV_INTEL_fpga_latency_control,+SPV_INTEL_task_sequence,+SPV_INTEL_optnone,+SPV_INTEL_token_type,+SPV_INTEL_bfloat16_conversion,+SPV_INTEL_joint_matrix,+SPV_INTEL_hw_thread_queries,+SPV_INTEL_memory_access_aliasing,+SPV_KHR_uniform_group_instructions,+SPV_INTEL_masked_gather_scatter,+SPV_INTEL_tensor_float32_conversion,+SPV_KHR_non_semantic_info,+SPV_INTEL_optnone /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-df5fbe.txt
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/file-table-tform" -replace=Code,Code -o /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-72786c.table /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-a2a875.table /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-8efed6.txt
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-wrapper" -o=/tmp/icpx-7afccebb5b/wrapper-d0479c.bc -host=x86_64-unknown-linux-gnu -target=spir64 -kind=sycl -batch /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-72786c.table
+ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/llc" -filetype=obj -o /tmp/icpx-7afccebb5b/cmTC_4e62f-wrapper-42b662.o /tmp/icpx-7afccebb5b/wrapper-d0479c.bc
+ "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/bin/ld" -export-dynamic --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_4e62f /lib/../lib64/crt1.o /lib/../lib64/crti.o /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtbegin.o -L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib -L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib -L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/lib/x86_64-unknown-linux-gnu -L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib -L/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0 -L/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/lib -L/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../.. -L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib -L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../opt/compiler/lib -L/lib -L/usr/lib -L/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/lib -L/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/lib -L/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/lib -L/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/lib -L/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/lib -L/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/lib -L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/opt/compiler/lib -L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib -L/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/lib /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-403dd6.o /tmp/icpx-7afccebb5b/cmTC_4e62f-wrapper-42b662.o -Bstatic -lsvml -Bdynamic -Bstatic -lirng -Bdynamic -lstdc++ -Bstatic -limf -Bdynamic -lm -lgcc_s -lgcc -Bstatic -lirc -Bdynamic -ldl -lgcc_s -lgcc -lsycl -lsycl-devicelib-host -lc -lgcc_s -lgcc -Bstatic -lirc_s -Bdynamic /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtend.o /lib/../lib64/crtn.o
+gmake[1]: Leaving directory '/home1/09561/ychitkara/mandelbrot/build/CMakeFiles/CMakeTmp'
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/include]
+    add: [/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/include]
+    add: [/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/include]
+    add: [/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/include]
+    add: [/scratch1/projects/compilers/intel24.1/oneapi/dpcpp-ct/2024.1/include]
+    add: [/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/include]
+    add: [/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/include/dal]
+    add: [/scratch1/projects/compilers/intel24.1/oneapi/dev-utilities/2024.1/include]
+    add: [/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/include]
+    add: [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl]
+    add: [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl/stl_wrappers]
+    add: [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include]
+    add: [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../opt/compiler/include]
+    add: [/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0]
+    add: [/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu]
+    add: [/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward]
+    add: [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include]
+    add: [/usr/local/include]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/include] ==> [/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/include]
+  collapse include dir [/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/include] ==> [/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/include]
+  collapse include dir [/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/include] ==> [/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/include]
+  collapse include dir [/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/include] ==> [/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/include]
+  collapse include dir [/scratch1/projects/compilers/intel24.1/oneapi/dpcpp-ct/2024.1/include] ==> [/scratch1/projects/compilers/intel24.1/oneapi/dpcpp-ct/2024.1/include]
+  collapse include dir [/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/include] ==> [/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/include]
+  collapse include dir [/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/include/dal] ==> [/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/include/dal]
+  collapse include dir [/scratch1/projects/compilers/intel24.1/oneapi/dev-utilities/2024.1/include] ==> [/scratch1/projects/compilers/intel24.1/oneapi/dev-utilities/2024.1/include]
+  collapse include dir [/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/include] ==> [/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/include]
+  collapse include dir [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl] ==> [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/include/sycl]
+  collapse include dir [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl/stl_wrappers] ==> [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/include/sycl/stl_wrappers]
+  collapse include dir [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include] ==> [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/include]
+  collapse include dir [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../opt/compiler/include] ==> [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/opt/compiler/include]
+  collapse include dir [/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0] ==> [/home1/apps/gcc/13.2.0/include/c++/13.2.0]
+  collapse include dir [/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu] ==> [/home1/apps/gcc/13.2.0/include/c++/13.2.0/x86_64-pc-linux-gnu]
+  collapse include dir [/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward] ==> [/home1/apps/gcc/13.2.0/include/c++/13.2.0/backward]
+  collapse include dir [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include] ==> [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/include;/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/include;/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/include;/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/include;/scratch1/projects/compilers/intel24.1/oneapi/dpcpp-ct/2024.1/include;/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/include;/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/include/dal;/scratch1/projects/compilers/intel24.1/oneapi/dev-utilities/2024.1/include;/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/include;/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/include/sycl;/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/include/sycl/stl_wrappers;/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/include;/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/opt/compiler/include;/home1/apps/gcc/13.2.0/include/c++/13.2.0;/home1/apps/gcc/13.2.0/include/c++/13.2.0/x86_64-pc-linux-gnu;/home1/apps/gcc/13.2.0/include/c++/13.2.0/backward;/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include;/usr/local/include;/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home1/09561/ychitkara/mandelbrot/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_4e62f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4e62f.dir/build.make CMakeFiles/cmTC_4e62f.dir/build]
+  ignore line: [gmake[1]: Entering directory '/home1/09561/ychitkara/mandelbrot/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_4e62f.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/dpcpp   -v -MD -MT CMakeFiles/cmTC_4e62f.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_4e62f.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_4e62f.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [icpx: warning: use of 'dpcpp' is deprecated and will be removed in a future release. Use 'icpx -fsycl' [-Wdeprecated]]
+  ignore line: [Intel(R) oneAPI DPC++/C++ Compiler 2024.1.0 (2024.1.0.20240308)]
+  ignore line: [Target: x86_64-unknown-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler]
+  ignore line: [Configuration file: /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../icpx.cfg]
+  ignore line: [Found candidate GCC installation: /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0]
+  ignore line: [Selected GCC installation: /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang" -cc1 -triple x86_64-unknown-linux-gnu -sycl-std=2020 -fsycl-unique-prefix=uid9ef3267953af3854 -include /tmp/icpx-d687f9ab94/CMakeCXXCompilerABI-header-986933.h -dependency-filter /tmp/icpx-d687f9ab94/CMakeCXXCompilerABI-header-986933.h -fsycl-enable-int-header-diags -fsycl-is-host -D __SYCL_NATIVE_CPU__ -D__SYCL_ANY_DEVICE_HAS_ANY_ASPECT__=1 -Eonly -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -fsycl-use-main-file-name -full-main-file-name /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -mrelocation-model static -fveclib=SVML -mframe-pointer=none -menable-no-infs -menable-no-nans -fapprox-func -funsafe-math-optimizations -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign preserve-sign -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -mllvm -x86-enable-unaligned-vector-move=true -tune-cpu generic --dependent-lib=sycl-devicelib-host -debugger-tuning=gdb -fdebug-compilation-dir=/home1/09561/ychitkara/mandelbrot/build/CMakeFiles/CMakeTmp -v -fcoverage-compilation-dir=/home1/09561/ychitkara/mandelbrot/build/CMakeFiles/CMakeTmp -fclang-abi-compat=17 -resource-dir /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18 -dependency-file CMakeFiles/cmTC_4e62f.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_4e62f.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl/stl_wrappers -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include -I/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/include -I/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/include -I/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/include -I/scratch1/projects/compilers/intel24.1/oneapi/dpcpp-ct/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/include/dal -I/scratch1/projects/compilers/intel24.1/oneapi/dev-utilities/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/include -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../opt/compiler/include -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0 -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0 -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -std=c++17 -fdeprecated-macro -ferror-limit 19 -fheinous-gnu-extensions -fgpu-rdc -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -fintel-compatibility -fintel-libirc-allowed -mllvm -disable-hir-generate-mkl-call -mllvm -sycl-host -mllvm -loopopt=1 -floopopt-pipeline=light -mllvm -intel-abi-compatible=true -x c++ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [clang -cc1 version 18.0.0 based upon LLVM 18.0.0git default target x86_64-unknown-linux-gnu]
+  ignore line: [ignoring nonexistent directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [ignoring nonexistent directory "/include"]
+  ignore line: [ignoring nonexistent directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [ignoring nonexistent directory "/include"]
+  ignore line: [ignoring duplicate directory "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include"]
+  ignore line: [  as it is a non-system directory that duplicates a system directory]
+  ignore line: [ignoring duplicate directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0"]
+  ignore line: [ignoring duplicate directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu"]
+  ignore line: [ignoring duplicate directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward"]
+  ignore line: [ignoring duplicate directory "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include"]
+  ignore line: [ignoring duplicate directory "/usr/local/include"]
+  ignore line: [ignoring duplicate directory "/usr/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/dpcpp-ct/2024.1/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/include/dal]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/dev-utilities/2024.1/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl/stl_wrappers]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../opt/compiler/include]
+  ignore line: [ /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0]
+  ignore line: [ /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu]
+  ignore line: [ /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang" -cc1 -triple spir64-unknown-unknown -aux-triple x86_64-unknown-linux-gnu -fsycl-is-device -fdeclare-spirv-builtins -mllvm -sycl-opt -fenable-sycl-dae -fsycl-instrument-device-code -Wno-sycl-strict -fsycl-int-header=/tmp/icpx-d687f9ab94/CMakeCXXCompilerABI-header-986933.h -fsycl-int-footer=/tmp/icpx-d687f9ab94/CMakeCXXCompilerABI-footer-fbbf45.h -sycl-std=2020 -ffine-grained-bitfield-accesses -fsycl-unique-prefix=uid9ef3267953af3854 -D__SYCL_ANY_DEVICE_HAS_ANY_ASPECT__=1 -Wspir-compat -emit-llvm-bc -emit-llvm-uselists -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -fsycl-use-main-file-name -full-main-file-name /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -mrelocation-model static -fveclib=SVML -mframe-pointer=all -menable-no-infs -menable-no-nans -fapprox-func -funsafe-math-optimizations -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign preserve-sign -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -mconstructor-aliases -aux-target-cpu x86-64 -debugger-tuning=gdb -fdebug-compilation-dir=/home1/09561/ychitkara/mandelbrot/build/CMakeFiles/CMakeTmp -v -fcoverage-compilation-dir=/home1/09561/ychitkara/mandelbrot/build/CMakeFiles/CMakeTmp -fclang-abi-compat=17 -resource-dir /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18 -dependency-file CMakeFiles/cmTC_4e62f.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_4e62f.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl/stl_wrappers -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include -I/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/include -I/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/include -I/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/include -I/scratch1/projects/compilers/intel24.1/oneapi/dpcpp-ct/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/include/dal -I/scratch1/projects/compilers/intel24.1/oneapi/dev-utilities/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/include -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../opt/compiler/include -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0 -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0 -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -std=c++17 -fdeprecated-macro -ferror-limit 19 -fheinous-gnu-extensions -fgpu-rdc -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -fintel-compatibility -fintel-compatibility-disable=FakeLoad -fintel-libirc-allowed -mllvm -disable-hir-generate-mkl-call -mllvm -intel-abi-compatible=true -o /tmp/icpx-d687f9ab94/CMakeCXXCompilerABI-ad93b9.bc -x c++ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [clang -cc1 version 18.0.0 based upon LLVM 18.0.0git default target x86_64-unknown-linux-gnu]
+  ignore line: [ignoring nonexistent directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [ignoring nonexistent directory "/include"]
+  ignore line: [ignoring nonexistent directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [ignoring nonexistent directory "/include"]
+  ignore line: [ignoring duplicate directory "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include"]
+  ignore line: [  as it is a non-system directory that duplicates a system directory]
+  ignore line: [ignoring duplicate directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0"]
+  ignore line: [ignoring duplicate directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu"]
+  ignore line: [ignoring duplicate directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward"]
+  ignore line: [ignoring duplicate directory "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include"]
+  ignore line: [ignoring duplicate directory "/usr/local/include"]
+  ignore line: [ignoring duplicate directory "/usr/include"]
+  ignore line: [ignoring duplicate directory "/usr/local/include"]
+  ignore line: [ignoring duplicate directory "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include"]
+  ignore line: [ignoring duplicate directory "/usr/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/dpcpp-ct/2024.1/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/include/dal]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/dev-utilities/2024.1/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl/stl_wrappers]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../opt/compiler/include]
+  ignore line: [ /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0]
+  ignore line: [ /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu]
+  ignore line: [ /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/append-file" /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp --append=/tmp/icpx-d687f9ab94/CMakeCXXCompilerABI-footer-fbbf45.h --orig-filename=/usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp --output=/tmp/icpx-d687f9ab94/CMakeCXXCompilerABI-7efe74.cpp --use-include]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang" -cc1 -triple x86_64-unknown-linux-gnu -sycl-std=2020 -fsycl-unique-prefix=uid9ef3267953af3854 -include /tmp/icpx-d687f9ab94/CMakeCXXCompilerABI-header-986933.h -dependency-filter /tmp/icpx-d687f9ab94/CMakeCXXCompilerABI-header-986933.h -fsycl-enable-int-header-diags -fsycl-is-host -D __SYCL_NATIVE_CPU__ -D__SYCL_ANY_DEVICE_HAS_ANY_ASPECT__=1 -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -fsycl-use-main-file-name -full-main-file-name /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -mrelocation-model static -fveclib=SVML -mframe-pointer=none -menable-no-infs -menable-no-nans -fapprox-func -funsafe-math-optimizations -fno-signed-zeros -mreassociate -freciprocal-math -fdenormal-fp-math=preserve-sign preserve-sign -ffp-contract=fast -fno-rounding-math -ffast-math -ffinite-math-only -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -mllvm -x86-enable-unaligned-vector-move=true -tune-cpu generic --dependent-lib=sycl-devicelib-host -debugger-tuning=gdb -fdebug-compilation-dir=/home1/09561/ychitkara/mandelbrot/build/CMakeFiles/CMakeTmp -v -fcoverage-compilation-dir=/home1/09561/ychitkara/mandelbrot/build/CMakeFiles/CMakeTmp -fclang-abi-compat=17 -resource-dir /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18 -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl/stl_wrappers -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include -iquote /usr/share/cmake/Modules -I/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/include -I/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/include -I/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/include -I/scratch1/projects/compilers/intel24.1/oneapi/dpcpp-ct/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/include/dal -I/scratch1/projects/compilers/intel24.1/oneapi/dev-utilities/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/include -I/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/include -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../opt/compiler/include -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0 -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0 -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -internal-isystem /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -O2 -std=c++17 -fdeprecated-macro -ferror-limit 19 -fheinous-gnu-extensions -fgpu-rdc -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -fintel-compatibility -fintel-libirc-allowed -mllvm -disable-hir-generate-mkl-call -mllvm -sycl-host -mllvm -loopopt=1 -floopopt-pipeline=light -mllvm -intel-abi-compatible=true -o /tmp/icpx-d687f9ab94/CMakeCXXCompilerABI-1135a8.o -x c++ /tmp/icpx-d687f9ab94/CMakeCXXCompilerABI-7efe74.cpp]
+  ignore line: [clang -cc1 version 18.0.0 based upon LLVM 18.0.0git default target x86_64-unknown-linux-gnu]
+  ignore line: [ignoring nonexistent directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [ignoring nonexistent directory "/include"]
+  ignore line: [ignoring nonexistent directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [ignoring nonexistent directory "/include"]
+  ignore line: [ignoring duplicate directory "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include"]
+  ignore line: [  as it is a non-system directory that duplicates a system directory]
+  ignore line: [ignoring duplicate directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0"]
+  ignore line: [ignoring duplicate directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu"]
+  ignore line: [ignoring duplicate directory "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward"]
+  ignore line: [ignoring duplicate directory "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include"]
+  ignore line: [ignoring duplicate directory "/usr/local/include"]
+  ignore line: [ignoring duplicate directory "/usr/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [ /usr/share/cmake/Modules]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/dpcpp-ct/2024.1/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/include/dal]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/dev-utilities/2024.1/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include/sycl/stl_wrappers]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../include]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../opt/compiler/include]
+  ignore line: [ /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0]
+  ignore line: [ /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/x86_64-pc-linux-gnu]
+  ignore line: [ /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../include/c++/13.2.0/backward]
+  ignore line: [ /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown host-x86_64-unknown-linux-gnu -output=CMakeFiles/cmTC_4e62f.dir/CMakeCXXCompilerABI.cpp.o -input=/tmp/icpx-d687f9ab94/CMakeCXXCompilerABI-ad93b9.bc -input=/tmp/icpx-d687f9ab94/CMakeCXXCompilerABI-1135a8.o -verbose]
+  ignore line: [Linking CXX executable cmTC_4e62f]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4e62f.dir/link.txt --verbose=1]
+  ignore line: [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/dpcpp  -v -rdynamic CMakeFiles/cmTC_4e62f.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_4e62f ]
+  ignore line: [icpx: warning: use of 'dpcpp' is deprecated and will be removed in a future release. Use 'icpx -fsycl' [-Wdeprecated]]
+  ignore line: [Intel(R) oneAPI DPC++/C++ Compiler 2024.1.0 (2024.1.0.20240308)]
+  ignore line: [Target: x86_64-unknown-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler]
+  ignore line: [Configuration file: /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../icpx.cfg]
+  ignore line: [Found candidate GCC installation: /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0]
+  ignore line: [Selected GCC installation: /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  ignore line: [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler -type=o -input=CMakeFiles/cmTC_4e62f.dir/CMakeCXXCompilerABI.cpp.o -list ]
+  ignore line: [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler -type=o -input=CMakeFiles/cmTC_4e62f.dir/CMakeCXXCompilerABI.cpp.o -list ]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=host-x86_64-unknown-linux-gnu sycl-spir64-unknown-unknown -input=CMakeFiles/cmTC_4e62f.dir/CMakeCXXCompilerABI.cpp.o -output=/tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-403dd6.o -output=/tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-6e5d84.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose]
+  ignore line: [Uncompressed bundle.]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/spirv-to-ir-wrapper" /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-6e5d84.o -o /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-9424f8.bc -llvm-spirv-opts "--spirv-preserve-auxdata --spirv-target-env=SPV-IR --spirv-builtin-format=global"]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/llvm-link" /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-9424f8.bc -o /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-0e18c9.bc --suppress-warnings]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-crt.o -output=/tmp/icpx-7afccebb5b/libsycl-crt-967f28.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose]
+  ignore line: [Uncompressed bundle.]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-complex.o -output=/tmp/icpx-7afccebb5b/libsycl-complex-068336.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose]
+  ignore line: [Uncompressed bundle.]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-complex-fp64.o -output=/tmp/icpx-7afccebb5b/libsycl-complex-fp64-9a4f7c.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose]
+  ignore line: [Uncompressed bundle.]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-cmath.o -output=/tmp/icpx-7afccebb5b/libsycl-cmath-31065f.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose]
+  ignore line: [Uncompressed bundle.]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-cmath-fp64.o -output=/tmp/icpx-7afccebb5b/libsycl-cmath-fp64-e5dfda.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose]
+  ignore line: [Uncompressed bundle.]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-imf.o -output=/tmp/icpx-7afccebb5b/libsycl-imf-860f62.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose]
+  ignore line: [Uncompressed bundle.]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-imf-fp64.o -output=/tmp/icpx-7afccebb5b/libsycl-imf-fp64-76809c.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose]
+  ignore line: [Uncompressed bundle.]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-imf-bf16.o -output=/tmp/icpx-7afccebb5b/libsycl-imf-bf16-626a1d.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose]
+  ignore line: [Uncompressed bundle.]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-fallback-cassert.o -output=/tmp/icpx-7afccebb5b/libsycl-fallback-cassert-65e6b4.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose]
+  ignore line: [Uncompressed bundle.]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-fallback-cstring.o -output=/tmp/icpx-7afccebb5b/libsycl-fallback-cstring-599287.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose]
+  ignore line: [Uncompressed bundle.]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-fallback-complex.o -output=/tmp/icpx-7afccebb5b/libsycl-fallback-complex-c0ddf3.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose]
+  ignore line: [Uncompressed bundle.]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-fallback-complex-fp64.o -output=/tmp/icpx-7afccebb5b/libsycl-fallback-complex-fp64-f79872.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose]
+  ignore line: [Uncompressed bundle.]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-fallback-cmath.o -output=/tmp/icpx-7afccebb5b/libsycl-fallback-cmath-4d5a76.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose]
+  ignore line: [Uncompressed bundle.]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-fallback-cmath-fp64.o -output=/tmp/icpx-7afccebb5b/libsycl-fallback-cmath-fp64-7db636.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose]
+  ignore line: [Uncompressed bundle.]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-fallback-imf.o -output=/tmp/icpx-7afccebb5b/libsycl-fallback-imf-a8f3a7.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose]
+  ignore line: [Uncompressed bundle.]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-fallback-imf-fp64.o -output=/tmp/icpx-7afccebb5b/libsycl-fallback-imf-fp64-a77847.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose]
+  ignore line: [Uncompressed bundle.]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-fallback-imf-bf16.o -output=/tmp/icpx-7afccebb5b/libsycl-fallback-imf-bf16-b3e5b5.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose]
+  ignore line: [Uncompressed bundle.]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-itt-user-wrappers.o -output=/tmp/icpx-7afccebb5b/libsycl-itt-user-wrappers-7f2c99.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose]
+  ignore line: [Uncompressed bundle.]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-itt-compiler-wrappers.o -output=/tmp/icpx-7afccebb5b/libsycl-itt-compiler-wrappers-316e79.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose]
+  ignore line: [Uncompressed bundle.]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-bundler" -type=o -targets=sycl-spir64-unknown-unknown -input=/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib/libsycl-itt-stubs.o -output=/tmp/icpx-7afccebb5b/libsycl-itt-stubs-51144b.o -unbundle -allow-missing-bundles -base-temp-dir=/tmp/icpx-7afccebb5b -verbose]
+  ignore line: [Uncompressed bundle.]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/llvm-link" -only-needed /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-0e18c9.bc /tmp/icpx-7afccebb5b/libsycl-crt-967f28.o /tmp/icpx-7afccebb5b/libsycl-complex-068336.o /tmp/icpx-7afccebb5b/libsycl-complex-fp64-9a4f7c.o /tmp/icpx-7afccebb5b/libsycl-cmath-31065f.o /tmp/icpx-7afccebb5b/libsycl-cmath-fp64-e5dfda.o /tmp/icpx-7afccebb5b/libsycl-imf-860f62.o /tmp/icpx-7afccebb5b/libsycl-imf-fp64-76809c.o /tmp/icpx-7afccebb5b/libsycl-imf-bf16-626a1d.o /tmp/icpx-7afccebb5b/libsycl-fallback-cassert-65e6b4.o /tmp/icpx-7afccebb5b/libsycl-fallback-cstring-599287.o /tmp/icpx-7afccebb5b/libsycl-fallback-complex-c0ddf3.o /tmp/icpx-7afccebb5b/libsycl-fallback-complex-fp64-f79872.o /tmp/icpx-7afccebb5b/libsycl-fallback-cmath-4d5a76.o /tmp/icpx-7afccebb5b/libsycl-fallback-cmath-fp64-7db636.o /tmp/icpx-7afccebb5b/libsycl-fallback-imf-a8f3a7.o /tmp/icpx-7afccebb5b/libsycl-fallback-imf-fp64-a77847.o /tmp/icpx-7afccebb5b/libsycl-fallback-imf-bf16-b3e5b5.o /tmp/icpx-7afccebb5b/libsycl-itt-user-wrappers-7f2c99.o /tmp/icpx-7afccebb5b/libsycl-itt-compiler-wrappers-316e79.o /tmp/icpx-7afccebb5b/libsycl-itt-stubs-51144b.o -o /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-cf2376.bc --suppress-warnings]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/sycl-post-link" -split=auto -emit-only-kernels-as-entry-points -emit-param-info -symbols -emit-exported-symbols -split-esimd -lower-esimd -O2 -spec-const=native -device-globals -o /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-a2a875.table /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-cf2376.bc]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/file-table-tform" -extract=Code -drop_titles -o /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-df5fbe.txt /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-a2a875.table]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/llvm-foreach" --in-file-list=/tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-df5fbe.txt --in-replace=/tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-df5fbe.txt --out-ext=spv --out-file-list=/tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-8efed6.txt --out-replace=/tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-8efed6.txt --out-dir=/tmp/icpx-7afccebb5b -- /scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/llvm-spirv -o /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-8efed6.txt -spirv-max-version=1.4 -spirv-debug-info-version=ocl-100 -spirv-allow-extra-diexpressions -spirv-allow-unknown-intrinsics=llvm.genx. -spirv-ext=-all +SPV_EXT_shader_atomic_float_add +SPV_EXT_shader_atomic_float_min_max +SPV_KHR_no_integer_wrap_decoration +SPV_KHR_float_controls +SPV_KHR_expect_assume +SPV_KHR_linkonce_odr +SPV_INTEL_subgroups +SPV_INTEL_media_block_io +SPV_INTEL_device_side_avc_motion_estimation +SPV_INTEL_fpga_loop_controls +SPV_INTEL_unstructured_loop_controls +SPV_INTEL_fpga_reg +SPV_INTEL_blocking_pipes +SPV_INTEL_function_pointers +SPV_INTEL_kernel_attributes +SPV_INTEL_io_pipes +SPV_INTEL_inline_assembly +SPV_INTEL_arbitrary_precision_integers +SPV_INTEL_float_controls2 +SPV_INTEL_vector_compute +SPV_INTEL_fast_composite +SPV_INTEL_joint_matrix +SPV_INTEL_arbitrary_precision_fixed_point +SPV_INTEL_arbitrary_precision_floating_point +SPV_INTEL_variable_length_array +SPV_INTEL_fp_fast_math_mode +SPV_INTEL_long_constant_composite +SPV_INTEL_arithmetic_fence +SPV_INTEL_global_variable_decorations +SPV_INTEL_cache_controls +SPV_INTEL_fpga_buffer_location +SPV_INTEL_fpga_argument_interfaces +SPV_INTEL_fpga_invocation_pipelining_attributes +SPV_INTEL_fpga_latency_control +SPV_INTEL_task_sequence +SPV_INTEL_optnone +SPV_INTEL_token_type +SPV_INTEL_bfloat16_conversion +SPV_INTEL_joint_matrix +SPV_INTEL_hw_thread_queries +SPV_INTEL_memory_access_aliasing +SPV_KHR_uniform_group_instructions +SPV_INTEL_masked_gather_scatter +SPV_INTEL_tensor_float32_conversion +SPV_KHR_non_semantic_info +SPV_INTEL_optnone /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-df5fbe.txt]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/file-table-tform" -replace=Code Code -o /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-72786c.table /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-a2a875.table /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-8efed6.txt]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/clang-offload-wrapper" -o=/tmp/icpx-7afccebb5b/wrapper-d0479c.bc -host=x86_64-unknown-linux-gnu -target=spir64 -kind=sycl -batch /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-72786c.table]
+  ignore line: [ "/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/llc" -filetype=obj -o /tmp/icpx-7afccebb5b/cmTC_4e62f-wrapper-42b662.o /tmp/icpx-7afccebb5b/wrapper-d0479c.bc]
+  link line: [ "/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/bin/ld" -export-dynamic --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_4e62f /lib/../lib64/crt1.o /lib/../lib64/crti.o /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtbegin.o -L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib -L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib -L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/lib/x86_64-unknown-linux-gnu -L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib -L/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0 -L/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/lib -L/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../.. -L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib -L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../opt/compiler/lib -L/lib -L/usr/lib -L/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/lib -L/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/lib -L/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/lib -L/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/lib -L/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/lib -L/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/lib -L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/opt/compiler/lib -L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib -L/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/lib /tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-403dd6.o /tmp/icpx-7afccebb5b/cmTC_4e62f-wrapper-42b662.o -Bstatic -lsvml -Bdynamic -Bstatic -lirng -Bdynamic -lstdc++ -Bstatic -limf -Bdynamic -lm -lgcc_s -lgcc -Bstatic -lirc -Bdynamic -ldl -lgcc_s -lgcc -lsycl -lsycl-devicelib-host -lc -lgcc_s -lgcc -Bstatic -lirc_s -Bdynamic /home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtend.o /lib/../lib64/crtn.o]
+    arg [/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/bin/ld] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_4e62f] ==> ignore
+    arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
+    arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
+    arg [/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtbegin.o] ==> obj [/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtbegin.o]
+    arg [-L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib] ==> dir [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib]
+    arg [-L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib] ==> dir [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib]
+    arg [-L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/lib/x86_64-unknown-linux-gnu] ==> dir [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/lib/x86_64-unknown-linux-gnu]
+    arg [-L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib] ==> dir [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib]
+    arg [-L/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0] ==> dir [/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0]
+    arg [-L/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../lib64] ==> dir [/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/lib] ==> dir [/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/lib]
+    arg [-L/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../..] ==> dir [/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../..]
+    arg [-L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib] ==> dir [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib]
+    arg [-L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../opt/compiler/lib] ==> dir [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../opt/compiler/lib]
+    arg [-L/lib] ==> dir [/lib]
+    arg [-L/usr/lib] ==> dir [/usr/lib]
+    arg [-L/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/lib] ==> dir [/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/lib]
+    arg [-L/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/lib] ==> dir [/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/lib]
+    arg [-L/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/lib] ==> dir [/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/lib]
+    arg [-L/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/lib] ==> dir [/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/lib]
+    arg [-L/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/lib] ==> dir [/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/lib]
+    arg [-L/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/lib] ==> dir [/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/lib]
+    arg [-L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/opt/compiler/lib] ==> dir [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/opt/compiler/lib]
+    arg [-L/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib] ==> dir [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib]
+    arg [-L/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/lib] ==> dir [/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/lib]
+    arg [/tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-403dd6.o] ==> obj [/tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-403dd6.o]
+    arg [/tmp/icpx-7afccebb5b/cmTC_4e62f-wrapper-42b662.o] ==> obj [/tmp/icpx-7afccebb5b/cmTC_4e62f-wrapper-42b662.o]
+    arg [-Bstatic] ==> ignore
+    arg [-lsvml] ==> lib [svml]
+    arg [-Bdynamic] ==> ignore
+    arg [-Bstatic] ==> ignore
+    arg [-lirng] ==> lib [irng]
+    arg [-Bdynamic] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-Bstatic] ==> ignore
+    arg [-limf] ==> lib [imf]
+    arg [-Bdynamic] ==> ignore
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-Bstatic] ==> ignore
+    arg [-lirc] ==> lib [irc]
+    arg [-Bdynamic] ==> ignore
+    arg [-ldl] ==> lib [dl]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lsycl] ==> lib [sycl]
+    arg [-lsycl-devicelib-host] ==> lib [sycl-devicelib-host]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-Bstatic] ==> ignore
+    arg [-lirc_s] ==> lib [irc_s]
+    arg [-Bdynamic] ==> ignore
+    arg [/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtend.o] ==> obj [/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtend.o]
+    arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
+  collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
+  collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
+  collapse obj [/lib/../lib64/crtn.o] ==> [/lib64/crtn.o]
+  collapse library dir [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib] ==> [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib]
+  collapse library dir [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib] ==> [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib]
+  collapse library dir [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/lib/x86_64-unknown-linux-gnu] ==> [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/lib/x86_64-unknown-linux-gnu]
+  collapse library dir [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib] ==> [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib]
+  collapse library dir [/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0] ==> [/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0]
+  collapse library dir [/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../lib64] ==> [/home1/apps/gcc/13.2.0/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../../../x86_64-pc-linux-gnu/lib] ==> [/home1/apps/gcc/13.2.0/x86_64-pc-linux-gnu/lib]
+  collapse library dir [/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/../../..] ==> [/home1/apps/gcc/13.2.0/lib]
+  collapse library dir [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../lib] ==> [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib]
+  collapse library dir [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/compiler/../../opt/compiler/lib] ==> [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/opt/compiler/lib]
+  collapse library dir [/lib] ==> [/lib]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  collapse library dir [/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/lib] ==> [/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/lib]
+  collapse library dir [/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/lib] ==> [/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/lib]
+  collapse library dir [/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/lib] ==> [/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/lib]
+  collapse library dir [/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/lib] ==> [/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/lib]
+  collapse library dir [/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/lib] ==> [/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/lib]
+  collapse library dir [/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/lib] ==> [/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/lib]
+  collapse library dir [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/opt/compiler/lib] ==> [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/opt/compiler/lib]
+  collapse library dir [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib] ==> [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib]
+  collapse library dir [/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/lib] ==> [/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/lib]
+  implicit libs: [svml;irng;stdc++;imf;m;gcc_s;gcc;irc;dl;gcc_s;gcc;sycl;sycl-devicelib-host;c;gcc_s;gcc;irc_s]
+  implicit objs: [/lib64/crt1.o;/lib64/crti.o;/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtbegin.o;/tmp/icpx-7afccebb5b/CMakeCXXCompilerABI-403dd6.o;/tmp/icpx-7afccebb5b/cmTC_4e62f-wrapper-42b662.o;/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/crtend.o;/lib64/crtn.o]
+  implicit dirs: [/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib;/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/lib/clang/18/lib/x86_64-unknown-linux-gnu;/home1/apps/gcc/13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0;/home1/apps/gcc/13.2.0/lib64;/lib64;/usr/lib64;/home1/apps/gcc/13.2.0/x86_64-pc-linux-gnu/lib;/home1/apps/gcc/13.2.0/lib;/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/opt/compiler/lib;/lib;/usr/lib;/scratch1/projects/compilers/intel24.1/oneapi/mkl/2024.1/lib;/scratch1/projects/compilers/intel24.1/oneapi/ipp/2021.11/lib;/scratch1/projects/compilers/intel24.1/oneapi/ippcp/2021.11/lib;/scratch1/projects/compilers/intel24.1/oneapi/dpl/2022.5/lib;/scratch1/projects/compilers/intel24.1/oneapi/dnnl/2024.1/lib;/scratch1/projects/compilers/intel24.1/oneapi/dal/2024.2/lib;/scratch1/projects/compilers/intel24.1/oneapi/tbb/2021.12/lib]
+  implicit fwks: []
+
+

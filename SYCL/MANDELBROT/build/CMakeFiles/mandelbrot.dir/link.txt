@@ -1,0 +1,1 @@
+/scratch1/projects/compilers/intel24.1/oneapi/compiler/2024.1/bin/dpcpp  -g -w -O2 -g -DNDEBUG -rdynamic CMakeFiles/mandelbrot.dir/src/main.cpp.o -o mandelbrot  -lOpenCL -lsycl /scratch1/projects/compilers/intel24.1/oneapi/compiler/latest/lib/libsycl-complex.o 

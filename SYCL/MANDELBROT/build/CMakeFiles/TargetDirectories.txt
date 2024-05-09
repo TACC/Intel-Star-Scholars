@@ -1,0 +1,4 @@
+/home1/09561/ychitkara/mandelbrot/build/CMakeFiles/rebuild_cache.dir
+/home1/09561/ychitkara/mandelbrot/build/CMakeFiles/edit_cache.dir
+/home1/09561/ychitkara/mandelbrot/build/CMakeFiles/run.dir
+/home1/09561/ychitkara/mandelbrot/build/CMakeFiles/mandelbrot.dir
