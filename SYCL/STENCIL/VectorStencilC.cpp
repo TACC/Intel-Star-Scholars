@@ -54,6 +54,7 @@ int main(int argc,char *argv[])
     double NSecClk;
     unsigned long int start,end;
     double elapsed_count[10],Average = 0.0;
+    float FNorm = 0.0;
 
 
     queue cpu_selector(cpu_selector_v);
@@ -89,6 +90,7 @@ int main(int argc,char *argv[])
 
     buffer<float,2> Buf_a(Mat_A.data(),range<2>(N,M));
     buffer<float,2> Buf_b(Mat_Stencil.data(),range<2>(N,M));
+    buffer<float,1> Buf_Fn(&FNorm, range<1>(1));
 
     Calibrate(&ClkPerSec,NSecClk);
 
@@ -101,25 +103,31 @@ int main(int argc,char *argv[])
         {
             accessor D_a(Buf_a,h);
             accessor D_b(Buf_b,h);
+            auto D_Fn = reduction(Buf_Fn, h, std::plus<float>());
 
-            h.parallel_for(range<2>(N-2,M-2), [=](auto index){
+            h.parallel_for(range<2>(N-2,M-2), D_Fn, [=](item<2> index, auto &sum){
               int row = index.get_id(0) + 1;
               int col = index.get_id(1) + 1;
 
-              D_b[row-1][col-1] = (4*D_a[row][col] - D_a[row-1][col] - D_a[row+1][col] - D_a[row][col-1] - D_a[row][col+1]);
+              float stencil_value = (4*D_a[row][col] - D_a[row-1][col] - D_a[row+1][col] - D_a[row][col-1] - D_a[row][col+1]);
+              D_b[row-1][col-1] = stencil_value;
+              sum += (stencil_value * stencil_value);
             });
 	}).wait();
 
+	FNorm = std::sqrt(FNorm);
+	
         q.submit([&] (handler &h)
         {
             accessor D_a(Buf_a,h);
             accessor D_b(Buf_b,h);
+            accessor D_Fn(Buf_Fn,h);
 
             h.parallel_for(range<2>(N-2,M-2), [=](auto index){
               int row = index.get_id(0) + 1;
               int col = index.get_id(1) + 1;
 
-              D_a[row][col] = (D_b[row-1][col-1]);
+              D_a[row][col] = (D_b[row-1][col-1]/D_Fn[0]);
             });
         }).wait();
 
