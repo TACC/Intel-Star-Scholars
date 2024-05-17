@@ -40,11 +40,11 @@
 
 \section{SYCL Memory Management}
 Yojan Chitkara\\
-October 11, 2023
+16th May, 2024
 
 
 \section{Introduction}
-This text describes the different techniques implemented in managing memory in SYCL. We look at 2 kernel implementations \textit{Matrix Addition} and \textit{Matrix Multiplication} each of which are managing memory in 3 different ways. We start off with describing what the different memory management techniques are, followed by our Kernel implementations using each memory management technique. With this we describe the results obtained on each of our kernel implementations. Finally we summarize with what we observed was the most ideal implementation for the kernels described.
+This text describes the different techniques implemented in managing memory in SYCL. We look at multiple implementations each of which are managing memory in 3 different ways. We start off with describing what the different memory management techniques are, followed by our Kernel implementations using each memory management technique. With this we describe the results obtained on each of our kernel implementations. Finally we summarize with what we observed was the most ideal implementation for the kernels described.
 \vspace{10pt}
 
 \subsection{Memory Management}
@@ -256,14 +256,14 @@ Further, we compare the SYCL implementations with the OpenMP implementation of t
 
 \begin{figure}
 \begin{subfigure}{.5\textwidth}
-    \includegraphics[width=.97\linewidth,keepaspectratio]{CoreScaling_Stencil_SYCL.JPG}
+    \includegraphics[width=.97\linewidth,keepaspectratio]{CoreScaling_vs_ExecTime.JPG}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
-    \includegraphics[width=.97\linewidth,keepaspectratio]{CoreScaling_Stencil_SYCLvsOpenMp.JPG}
+    \includegraphics[width=.97\linewidth,keepaspectratio]{CoreScaling_vs_SpeedUp.JPG}
 \end{subfigure}%
     \caption{Stencil Core Scaling Study}
 \end{figure}
-\\
+
 \subsection{MANDELBROT SET}
 This kernel generates the Mandelbrot set fractal image. Each pixel is rendered independently and given the nature of the fractal image, numerous iterations of rendering are essential. Each iteration is an input to the next, resulting in a high quality image as the output. We only found an implementation of this workload which used buffers for memory management. The results for this benchmark are shown in Fig \ref{fig:Mandlebrot}. As can be observed, the GPU has a 4X better performance when compared to the CPU which suggests that this is a memory intensive application.
 \begin{figure}
