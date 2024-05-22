@@ -261,6 +261,27 @@ Further, we compare the SYCL implementations with the OpenMP implementation of t
 \begin{subfigure}{.5\textwidth}
     \includegraphics[width=.97\linewidth,keepaspectratio]{CoreScaling_vs_SpeedUp.JPG}
 \end{subfigure}%
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}                                   
+    \hline\hline  
+    Cores & \multicolumn{3}{|c|}{Time To Completion} \\
+    \hline\hline
+    & SYCL-close & SYCL-spread & OpenMP \\
+    \hline\hline
+    1 & 5.85249 & 15.138 & 6.32049 \\ \hline
+    8 & 0.8383831 & 2.165 & 0.884545\\ \hline
+    16 & 0.473034 & 1.193 & 0.484962\\ \hline
+    24 & 0.351835 & 0.901 & 0.363318 \\ \hline
+    32 & 0.310944 & 0.773 & 0.314472 \\ \hline
+    40 & 0.285331 & 0.692 & 0.290714 \\ \hline
+    48 & 0.26341 & 0.647 & 0.264566 \\ \hline
+    56 & 0.234592 & 0.618 & 0.249382 \\ \hline
+    64 & 0.210686 & 0.6 & 0.225899 \\ \hline
+    72 & 0.218115 & 0.583 & 0.21155 \\ \hline
+    80 & 0.206624 & 0.568 & 0.202436 \\ \hline
+
+\end{tabular}
+\end{center}
     \caption{Stencil Core Scaling Study}
 \end{figure}
 
@@ -275,7 +296,7 @@ This kernel generates the Mandelbrot set fractal image. Each pixel is rendered i
 \subsection{MONTE CARLO}
 Monte Carlo workloads are a set of benchmarks which rely on repeated random sampling to obtain numerical results. Since the underlying concept relies on accuracy of computation for estimating the value of pi, we are able to classify this workload as compute intensive. This implementation is available for all three memory management techniques and we were able to observe a speedup of ~30x on a GPU over a CPU implementation of the same. \\\\\\\\\
 \section{Summary}
-The cumulative results for all benchmarks are shown in Fig. \ref{fig:Speedup}. On average compute intensive benchmarks show a speedup of 30-35x and memory intensive applications show a speedup of 2-4x. These numbers align with our performance estimation using baseline specifications of the two machines. Additionally, we observe that memory management using buffers on SYCL runtime performs better than all other memory management techniques. Among these, malloc shared (implicit copying on demand) performs better than double copy, which tends to incur high transfer overhead in some cases.
+The cumulative results for all benchmarks are shown in Fig. \ref{fig:Speedup}. On average compute intensive benchmarks show a speedup of 30-35x and memory intensive applications show a speedup of 2-4x. These numbers align with our performance estimation using baseline specifications of the two machines. Additionally, we observe that memory management using buffers on SYCL runtime performs better than all other memory management techniques. Among these, malloc shared (implicit copying on demand) performs better than double copy, which tends to incur high transfer overhead in some cases.\\\\
 \begin{figure}
 \centering
     \includegraphics[width=.6\linewidth,keepaspectratio]{monte_carlo.png}
@@ -297,4 +318,7 @@ The cumulative results for all benchmarks are shown in Fig. \ref{fig:Speedup}. O
 
 %With different implementations, yielding similar results,
 %ease of implementation with standard malloc calls results in "malloc\_shared" implementation resulting in the least TTC for the Matrix Multiplication Kernel.
+
+Reference Doc with data : https://docs.google.com/spreadsheets/d/1dzIbaLKGEW2b-i8LG8jFzkTk\_KiveANWXMFyOzziYHs/edit?pli=1\#gid=2083900440
+
 \end{document}
