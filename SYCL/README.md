@@ -5,6 +5,10 @@
 
 Maintaining this repository to incremently add SYCL code to run on Accelerators.
 
+FileNameA.cpp - SYCL implementation using malloc host and device and memcpy
+FileNameB.cpp - SYCL implementation using malloc\_shared
+FileNameC.cpp - SYCL implementation using using SYCL Buffers.
+
 ## Libraries
 
 Please be sure to install any libraries related to SYCL to compile and run the code.

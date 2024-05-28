@@ -83,7 +83,7 @@ int main(int argc,char *argv[])
     for(int i=0;i<M;i++)
     {
         for(int j=0;j<N;j++)
-            std::cout << H_a[(i*N) + j] << "\t";
+            std::cout << Mat_A[(i*N) + j] << "\t";
 
         std::cout << "\n";
     }*/
@@ -96,7 +96,11 @@ int main(int argc,char *argv[])
 
     for(int count = 0;count < atoi(argv[1]);count++)
     {
-        start = rdtsc(); 
+        start = rdtsc();
+        if(FNorm == 0.0f)
+          FNorm = 1.0f;
+        else
+          FNorm = 1.0f;
 
         // Kernel to compute the 5pt stencil and simultaneously the L2Norm
         q.submit([&] (handler &h)
@@ -143,7 +147,7 @@ int main(int argc,char *argv[])
     //for(int i=0;i<N*M;i+=M)
     //{
     //    for(int j=i;j<(i+M);j++)
-    //        std::cout << H_a[j] << "\t";
+    //        std::cout << Mat_A[j] << "\t";
     //    std::cout << "\n";
     //}
 
